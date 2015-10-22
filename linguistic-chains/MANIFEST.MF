@@ -1,0 +1,11 @@
+Manifest-Version: 1.0 
+Main-Class: linguistic_chains.Main
+Package: com.github
+Specification-Title: Linguistic Chains
+Specification-Version: 1.0
+Specification-Vendor: Alexander Zagniotov
+Implementation-Title: Linguistic Chains
+Implementation-Version: 0
+Implementation-Vendor: Alexander Zagniotov
+Built-By: Alexander Zagniotov 
+Created-By: 1.7.0_76 (Oracle Corporation)
