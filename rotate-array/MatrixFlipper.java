@@ -59,7 +59,7 @@ public class MatrixFlipper {
       void dump() {
          for (int row = 0; row < this.rows; row++) {
             for (int col = 0; col < this.columns; col++) {
-               System.out.print("__" + matrix[row][col] + "__\t");
+               System.out.print(matrix[row][col] + "\t");
             }
             System.out.println();
          }
