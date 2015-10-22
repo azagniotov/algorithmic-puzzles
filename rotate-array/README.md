@@ -14,6 +14,7 @@ The nested loop iterates over an `array.length / 2` in `y/rows` and `x/columns` 
 In others words, a `quarter` of the above 2D array (see the numbers in bold):
 
 The values cached in the constant space in each iteration in the following order (if rotating click-wise):
+
 1 -> 2 -> 3 ->
 
 7 -> 8 -> 9 -> 
