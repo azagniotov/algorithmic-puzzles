@@ -10,9 +10,12 @@ Given an array 6x6:
 | 31  | 32  | 33  | 34  | 35  | 36  |
 
 The nested loop iterates over an `array.length / 2` in `y/rows` and `x/columns` directions. 
+
 In others words, a `quarter` of the above 2D array (see the numbers in bold):
 
-The values cached in the constant space in each iteration in the following order:
+The values cached in the constant space in each iteration in the following order (if rotating click-wise):
 1 -> 2 -> 3 ->
-7 -> 8 -> 9 ->
+
+7 -> 8 -> 9 -> 
+
 13 -> 14 -> 15 
