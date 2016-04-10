@@ -1,6 +1,6 @@
 package com.zagniotov.puzzles.rotatearray;
 
-public class MatrixFlipper {
+public class MatrixFlipperTakeOne {
 
 
    public static void main(final String[] args) {
