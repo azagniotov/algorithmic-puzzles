@@ -1,13 +1,13 @@
 package com.zagniotov.puzzles.rotatearray;
 
 
-class MatrixFlipperTakeTwo {
+class MatrixFlipperTake2 {
 
     private final int rows;
     private final int cols;
     private final int[][] matrix;
 
-    MatrixFlipperTakeTwo(final int rows, final int cols) {
+    MatrixFlipperTake2(final int rows, final int cols) {
         this.rows = rows;
         this.cols = cols;
         this.matrix = new int[rows][cols];
@@ -53,12 +53,12 @@ class MatrixFlipperTakeTwo {
     }
 
     public static void main(String[] args) {
-        final MatrixFlipperTakeTwo matrixFlipperTakeTwo = new MatrixFlipperTakeTwo(7, 7);
-        matrixFlipperTakeTwo.seed();
-        matrixFlipperTakeTwo.dump();
+        final MatrixFlipperTake2 matrixFlipperTake2 = new MatrixFlipperTake2(7, 7);
+        matrixFlipperTake2.seed();
+        matrixFlipperTake2.dump();
 
-        matrixFlipperTakeTwo.rotateClockwise();
+        matrixFlipperTake2.rotateClockwise();
 
-        matrixFlipperTakeTwo.dump();
+        matrixFlipperTake2.dump();
     }
 }
