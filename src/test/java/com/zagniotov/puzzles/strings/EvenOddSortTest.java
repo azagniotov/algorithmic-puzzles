@@ -50,5 +50,8 @@ public class EvenOddSortTest {
 
         result = evenOddSort.sort("212111");
         assertEquals(result, "221111");
+
+        result = evenOddSort.sort("0");
+        assertEquals(result, "0");
     }
 }
