@@ -36,12 +36,12 @@ class EvenOddSort {
                     chars[rightPointer] = (char) left;
                     --rightPointer;
                 } else {
-                    // keep iterating over odd chars while the right pointer larger than left
+                    // keep iterating from the end if a char is odd & while the right pointer larger than left
                     while (leftPointer < rightPointer && right % 2 != 0) {
                         right = (int) chars[--rightPointer];
                     }
 
-                    // if we broke out because pointer condition is false and char is even - do not swap
+                    // if we broke out because the pointer condition is false, swap only if the the char is even
                     if (right % 2 == 0) {
                         chars[leftPointer] = (char) right;
                         chars[rightPointer] = (char) left;

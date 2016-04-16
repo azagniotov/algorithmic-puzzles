@@ -13,7 +13,7 @@ public class EvenOddSortTest {
         final EvenOddSort evenOddSort = new EvenOddSort();
         final String result = evenOddSort.sort(null);
 
-        assertEquals(result, "");
+        assertEquals("", result);
     }
 
     @Test
@@ -21,7 +21,7 @@ public class EvenOddSortTest {
         final EvenOddSort evenOddSort = new EvenOddSort();
         final String result = evenOddSort.sort("");
 
-        assertEquals(result, "");
+        assertEquals("", result);
     }
 
     @Test
@@ -29,7 +29,7 @@ public class EvenOddSortTest {
         final EvenOddSort evenOddSort = new EvenOddSort();
         final String result = evenOddSort.sort("");
 
-        assertEquals(result, "");
+        assertEquals("", result);
     }
 
     @Test
@@ -37,24 +37,24 @@ public class EvenOddSortTest {
         final EvenOddSort evenOddSort = new EvenOddSort();
 
         String result = evenOddSort.sort("12");
-        assertEquals(result, "21");
+        assertEquals("21", result);
 
         result = evenOddSort.sort("12345");
-        assertEquals(result, "42315");
+        assertEquals("42315", result);
 
         result = evenOddSort.sort("2222222");
-        assertEquals(result, "2222222");
+        assertEquals("2222222", result);
 
         result = evenOddSort.sort("211111");
-        assertEquals(result, "211111");
+        assertEquals("211111", result);
 
         result = evenOddSort.sort("212111");
-        assertEquals(result, "221111");
+        assertEquals("221111", result);
 
         result = evenOddSort.sort("0");
-        assertEquals(result, "0");
+        assertEquals("0", result);
 
         result = evenOddSort.sort("23232323");
-        assertEquals(result, "22223333");
+        assertEquals("22223333", result);
     }
 }
