@@ -23,27 +23,28 @@ class EvenOddSort {
         final char[] chars = subject.toCharArray();
         int leftPointer = 0;
         int rightPointer = chars.length - 1;
-        int cache;
 
         while (leftPointer < rightPointer) {
             int left = (int) chars[leftPointer];
             if (left % 2 == 0) {
                 ++leftPointer;
             } else {
-                cache = left;
+                // the 'left' char is odd, lets start looking form the other end
                 int right = (int) chars[rightPointer];
                 if (right % 2 == 0) {
                     chars[leftPointer] = (char) right;
-                    chars[rightPointer] = (char) cache;
+                    chars[rightPointer] = (char) left;
                     --rightPointer;
                 } else {
+                    // keep iterating over odd chars while the right pointer larger than left
                     while (leftPointer < rightPointer && right % 2 != 0) {
                         right = (int) chars[--rightPointer];
                     }
 
+                    // if we broke out because pointer condition is false and char is even - do not swap
                     if (right % 2 == 0) {
                         chars[leftPointer] = (char) right;
-                        chars[rightPointer] = (char) cache;
+                        chars[rightPointer] = (char) left;
                     }
                 }
             }
