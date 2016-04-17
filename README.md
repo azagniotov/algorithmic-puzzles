@@ -5,7 +5,8 @@ A Java program that finds the word from which one can remove the most letters, o
 
 #### Arrays
 * Rotate 2D array 90 degrees (clockwise and counter-clockwise
-* Binary search
+* Binary search in sorted array
+* Binary search in 2D sorted array
 
 #### Strings
 * Even-odd sort of characters
