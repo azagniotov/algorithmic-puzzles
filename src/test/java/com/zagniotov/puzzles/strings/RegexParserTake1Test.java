@@ -1,4 +1,4 @@
-package com.zagniotov.puzzles.regex;
+package com.zagniotov.puzzles.strings;
 
 import org.junit.Test;
 

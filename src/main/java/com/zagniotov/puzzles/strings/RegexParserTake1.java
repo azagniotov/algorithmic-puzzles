@@ -1,4 +1,4 @@
-package com.zagniotov.puzzles.regex;
+package com.zagniotov.puzzles.strings;
 
 /**
  * Implement regular expression matching with support for '.' and '*'.

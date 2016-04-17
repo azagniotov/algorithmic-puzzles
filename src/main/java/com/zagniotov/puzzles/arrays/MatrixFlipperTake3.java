@@ -1,4 +1,4 @@
-package com.zagniotov.puzzles.rotatearray;
+package com.zagniotov.puzzles.arrays;
 
 class MatrixFlipperTake3 {
 

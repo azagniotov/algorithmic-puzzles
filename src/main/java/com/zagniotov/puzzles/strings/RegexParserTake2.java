@@ -1,4 +1,4 @@
-package com.zagniotov.puzzles.regex;
+package com.zagniotov.puzzles.strings;
 
 /**
  * -    . matches any single character

@@ -1,4 +1,4 @@
-package com.zagniotov.puzzles.binarysearch;
+package com.zagniotov.puzzles.arrays;
 
 
 class BinarySearchTake1 {
