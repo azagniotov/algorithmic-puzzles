@@ -9,9 +9,9 @@ package com.zagniotov.puzzles.strings;
  * - ascii values for numeric characters from 0 to 9, are respectively from 48 to 57, i.e.:
  *      a numeric char with an even numeric value has an ascii even value
  */
-class EvenOddSort {
+class EvenOddSortTake1 {
 
-    EvenOddSort() {
+    EvenOddSortTake1() {
 
     }
 
