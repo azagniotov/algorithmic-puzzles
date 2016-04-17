@@ -26,23 +26,23 @@ class EvenOddSort {
 
         while (leftPointer < rightPointer) {
             int left = (int) chars[leftPointer];
-            if (left % 2 == 0) {
+            if (isEven(left)) {
                 ++leftPointer;
             } else {
                 // the 'left' char is odd, lets start looking form the other end
                 int right = (int) chars[rightPointer];
-                if (right % 2 == 0) {
+                if (isEven(right)) {
                     chars[leftPointer] = (char) right;
                     chars[rightPointer] = (char) left;
                     --rightPointer;
                 } else {
                     // keep iterating from the end if a char is odd & while the right pointer larger than left
-                    while (leftPointer < rightPointer && right % 2 != 0) {
+                    while (leftPointer < rightPointer && isOdd(right)) {
                         right = (int) chars[--rightPointer];
                     }
 
                     // if we broke out because the pointer condition is false, swap only if the the char is even
-                    if (right % 2 == 0) {
+                    if (isEven(right)) {
                         chars[leftPointer] = (char) right;
                         chars[rightPointer] = (char) left;
                     }
@@ -51,5 +51,13 @@ class EvenOddSort {
         }
 
         return String.valueOf(chars);
+    }
+
+    private boolean isEven(final int value) {
+        return value % 2 == 0;
+    }
+
+    private boolean isOdd(final int value) {
+        return !isEven(value);
     }
 }
