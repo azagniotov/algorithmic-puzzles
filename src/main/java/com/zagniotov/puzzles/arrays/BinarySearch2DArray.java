@@ -4,15 +4,15 @@ import java.util.Arrays;
 
 /**
  * Find coordinates of a needle in 2D haystack
- *
+ * <p>
  * - Binary Search Solution:
- *   As each row takes O(log N) time to search, and there are a total of N rows,
- *   we are able to do it in O(N * log N) time.
- *
+ * As each row takes O(log N) time to search, and there are a total of N rows,
+ * we are able to do it in O(N * log N) time.
+ * <p>
  * - Step-wise Linear Search (current solution):
- *   In each step either a row or a column gets eliminated.
- *   The worst case scenario is where it ended up in the opposite corner of the matrix,
- *   which takes at most 2N steps. Therefore, ths algorithm runs in O(n) time.
+ * In each step either a row or a column gets eliminated.
+ * The worst case scenario is where it ended up in the opposite corner of the matrix,
+ * which takes at most 2N steps. Therefore, ths algorithm runs in O(n) time.
  */
 public class BinarySearch2DArray {
 
