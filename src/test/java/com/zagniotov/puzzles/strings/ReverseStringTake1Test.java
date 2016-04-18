@@ -14,7 +14,7 @@ public class ReverseStringTake1Test {
         String result = reverseStringTake1.reverse("1");
         assertEquals("1", result);
 
-        result = reverseStringTake1.reverse("");
+        result = reverseStringTake1.reverse("   ");
         assertEquals("", result);
 
         result = reverseStringTake1.reverse(null);
