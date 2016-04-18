@@ -75,23 +75,11 @@ Java HotSpot(TM) 64-Bit Server VM (build 24.76-b04, mixed mode)
 ```
 
 ### Building
-No Java build libraries (Ant, Maven, Gradle) are required to build the program. Building is done using
-the `build.sh` file, which compiles sources and creates an executable JAR
-
-1. Open shell window
-2. Navigate to the root of `linguistic-chains` directory where the current README is, ie.: `linguistic-chains/`
-3. Execute `build.sh` by running the command `sh build.sh`
-4. Find the generated `linguistic-chains-1.0.0.jar` in the current directory, ie.: `linguistic-chains/linguistic-chains-1.0.0.jar`
+COMING SOON...
 
 
 ### Executing
-1. Make sure you have successfully built `linguistic-chains-1.0.0.jar` (see `Building` section)
-2. Make sure you under the root of `linguistic-chains` directory where the current README is, ie.: `linguistic-chains/`
-3. Put the input file in the directory where the generated JAR is, ie.: `linguistic-chains/<INPUT_FILE_NAME>`
-4. Execute the command `java -jar linguistic-chains-1.0.0.jar <INPUT_FILE_NAME>`
-5. Input file path should be relative to `linguistic-chains` directory, ie.: both ways are fine:
-(a) `java -jar linguistic-chains-1.0.0.jar input.txt`
-(b) `java -jar linguistic-chains-1.0.0.jar input/unix.txt`
+COMING SOON...
 
 
 ##### Input Files
@@ -102,5 +90,4 @@ Located under `input` directory:
 
 
 ### Testing
-1. Make sure you under the root of `linguistic-chains` directory where the current README is, ie.: `linguistic-chains/`
-2. Execute `test.sh` by running the command `sh test.sh`
+COMING SOON...
