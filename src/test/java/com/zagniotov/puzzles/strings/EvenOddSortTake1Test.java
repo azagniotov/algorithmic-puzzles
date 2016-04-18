@@ -9,7 +9,7 @@ public class EvenOddSortTake1Test {
 
 
     @Test
-    public void shouldReturnEmptyString_WhenGivenIsNull() throws Exception {
+    public void shouldReturnEmptyString_WhenGivenStringIsNull() throws Exception {
         final EvenOddSortTake1 evenOddSortTake1 = new EvenOddSortTake1();
         final String result = evenOddSortTake1.sort(null);
 
@@ -17,7 +17,7 @@ public class EvenOddSortTake1Test {
     }
 
     @Test
-    public void shouldReturnEmptyString_WhenGivenIsEmpty() throws Exception {
+    public void shouldReturnEmptyString_WhenGivenIsEmptyString() throws Exception {
         final EvenOddSortTake1 evenOddSortTake1 = new EvenOddSortTake1();
         final String result = evenOddSortTake1.sort("");
 
@@ -25,9 +25,9 @@ public class EvenOddSortTake1Test {
     }
 
     @Test
-    public void shouldReturnEmptyString_WhenGivenContainsSpacesOnly() throws Exception {
+    public void shouldReturnEmptyString_WhenGivenStringContainsSpacesOnly() throws Exception {
         final EvenOddSortTake1 evenOddSortTake1 = new EvenOddSortTake1();
-        final String result = evenOddSortTake1.sort("");
+        final String result = evenOddSortTake1.sort("   ");
 
         assertEquals("", result);
     }
