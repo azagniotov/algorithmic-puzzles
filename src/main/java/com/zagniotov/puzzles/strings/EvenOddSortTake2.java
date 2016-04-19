@@ -34,9 +34,11 @@ class EvenOddSortTake2 {
                 rightPointer--;
             }
 
-            char cache = chars[leftPointer];
-            chars[leftPointer] = chars[rightPointer];
-            chars[rightPointer] = cache;
+            if (leftPointer < rightPointer) {
+                char cache = chars[leftPointer];
+                chars[leftPointer] = chars[rightPointer];
+                chars[rightPointer] = cache;
+            }
         }
 
         return String.valueOf(chars);
