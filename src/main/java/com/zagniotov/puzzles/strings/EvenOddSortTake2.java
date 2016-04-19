@@ -38,6 +38,9 @@ class EvenOddSortTake2 {
                 char cache = chars[leftPointer];
                 chars[leftPointer] = chars[rightPointer];
                 chars[rightPointer] = cache;
+
+                leftPointer++;
+                rightPointer--;
             }
         }
 
