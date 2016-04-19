@@ -9,7 +9,7 @@ A Java program that finds the word from which one can remove the most letters, o
 * Binary search in 2D sorted array
 
 #### Strings
-* Even-odd sort of characters
+* Segregate even/odd numeric characters in a string
 * Reverse a string
 * Regex parser
 
