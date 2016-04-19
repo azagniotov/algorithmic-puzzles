@@ -10,24 +10,24 @@ public class EvenOddSortTake2Test {
 
     @Test
     public void shouldReturnEmptyString_WhenGivenIsNull() throws Exception {
-        final EvenOddSortTake2 EvenOddSortTake2 = new EvenOddSortTake2();
-        final String result = EvenOddSortTake2.segregate(null);
+        final EvenOddSortTake2 evenOddSortTake2 = new EvenOddSortTake2();
+        final String result = evenOddSortTake2.segregate(null);
 
         assertEquals("", result);
     }
 
     @Test
     public void shouldReturnEmptyString_WhenGivenIsEmpty() throws Exception {
-        final EvenOddSortTake2 EvenOddSortTake2 = new EvenOddSortTake2();
-        final String result = EvenOddSortTake2.segregate("");
+        final EvenOddSortTake2 evenOddSortTake2 = new EvenOddSortTake2();
+        final String result = evenOddSortTake2.segregate("");
 
         assertEquals("", result);
     }
 
     @Test
     public void shouldReturnEmptyString_WhenGivenContainsSpacesOnly() throws Exception {
-        final EvenOddSortTake2 EvenOddSortTake2 = new EvenOddSortTake2();
-        final String result = EvenOddSortTake2.segregate("");
+        final EvenOddSortTake2 evenOddSortTake2 = new EvenOddSortTake2();
+        final String result = evenOddSortTake2.segregate("");
 
         assertEquals("", result);
     }
