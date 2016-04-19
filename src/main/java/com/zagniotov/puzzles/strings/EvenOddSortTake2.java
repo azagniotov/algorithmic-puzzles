@@ -15,7 +15,7 @@ class EvenOddSortTake2 {
 
     }
 
-    String sort(final String subject) {
+    String segregate(final String subject) {
         if (subject == null || subject.trim().equals("")) {
             return "";
         }

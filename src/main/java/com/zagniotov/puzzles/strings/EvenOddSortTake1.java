@@ -9,7 +9,7 @@ package com.zagniotov.puzzles.strings;
  * - ascii values for numeric characters from 0 to 9, are respectively from 48 to 57, i.e.:
  * a numeric char with an even numeric value has an ascii even value
  *
- * @see EvenOddSortTake2#sort(String) for a more clean & consized solution
+ * @see EvenOddSortTake2#segregate(String) for a more clean & consized solution
  */
 class EvenOddSortTake1 {
 
@@ -17,7 +17,7 @@ class EvenOddSortTake1 {
 
     }
 
-    String sort(final String subject) {
+    String segregate(final String subject) {
         if (subject == null || subject.trim().equals("")) {
             return "";
         }

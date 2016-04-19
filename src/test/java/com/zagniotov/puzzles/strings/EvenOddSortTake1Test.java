@@ -11,7 +11,7 @@ public class EvenOddSortTake1Test {
     @Test
     public void shouldReturnEmptyString_WhenGivenStringIsNull() throws Exception {
         final EvenOddSortTake1 evenOddSortTake1 = new EvenOddSortTake1();
-        final String result = evenOddSortTake1.sort(null);
+        final String result = evenOddSortTake1.segregate(null);
 
         assertEquals("", result);
     }
@@ -19,7 +19,7 @@ public class EvenOddSortTake1Test {
     @Test
     public void shouldReturnEmptyString_WhenGivenIsEmptyString() throws Exception {
         final EvenOddSortTake1 evenOddSortTake1 = new EvenOddSortTake1();
-        final String result = evenOddSortTake1.sort("");
+        final String result = evenOddSortTake1.segregate("");
 
         assertEquals("", result);
     }
@@ -27,7 +27,7 @@ public class EvenOddSortTake1Test {
     @Test
     public void shouldReturnEmptyString_WhenGivenStringContainsSpacesOnly() throws Exception {
         final EvenOddSortTake1 evenOddSortTake1 = new EvenOddSortTake1();
-        final String result = evenOddSortTake1.sort("   ");
+        final String result = evenOddSortTake1.segregate("   ");
 
         assertEquals("", result);
     }
@@ -36,25 +36,25 @@ public class EvenOddSortTake1Test {
     public void shouldReturnSortedString() throws Exception {
         final EvenOddSortTake1 evenOddSortTake1 = new EvenOddSortTake1();
 
-        String result = evenOddSortTake1.sort("12");
+        String result = evenOddSortTake1.segregate("12");
         assertEquals("21", result);
 
-        result = evenOddSortTake1.sort("12345");
+        result = evenOddSortTake1.segregate("12345");
         assertEquals("42315", result);
 
-        result = evenOddSortTake1.sort("2222222");
+        result = evenOddSortTake1.segregate("2222222");
         assertEquals("2222222", result);
 
-        result = evenOddSortTake1.sort("211111");
+        result = evenOddSortTake1.segregate("211111");
         assertEquals("211111", result);
 
-        result = evenOddSortTake1.sort("212111");
+        result = evenOddSortTake1.segregate("212111");
         assertEquals("221111", result);
 
-        result = evenOddSortTake1.sort("0");
+        result = evenOddSortTake1.segregate("0");
         assertEquals("0", result);
 
-        result = evenOddSortTake1.sort("23232323");
+        result = evenOddSortTake1.segregate("23232323");
         assertEquals("22223333", result);
     }
 }
