@@ -1,17 +1,17 @@
-package com.zagniotov.puzzles.trees;
+package com.zagniotov.puzzles.common;
 
-final class Node {
+public final class Node {
     private final int value;
     private final Node leftChild;
     private final Node rightChild;
 
-    Node(final int value, final Node leftChild, final Node rightChild) {
+    public Node(final int value, final Node leftChild, final Node rightChild) {
         this.value = value;
         this.leftChild = leftChild;
         this.rightChild = rightChild;
     }
 
-    boolean isLeaf() {
+    public boolean isLeaf() {
         return leftChild == null && rightChild == null;
     }
 

@@ -1,5 +1,8 @@
 package com.zagniotov.puzzles.arrays;
 
+import static com.zagniotov.puzzles.common.Utils.seed;
+import static com.zagniotov.puzzles.common.Utils.stdout;
+
 class MatrixFlipperTake4 {
 
     private final int rows;
@@ -9,16 +12,7 @@ class MatrixFlipperTake4 {
     MatrixFlipperTake4(final int rows, final int cols) {
         this.rows = rows;
         this.cols = cols;
-        this.matrix = new int[rows][cols];
-    }
-
-    void seed() {
-        int value = 0;
-        for (int row = 0; row < this.rows; row++) {
-            for (int col = 0; col < this.cols; col++) {
-                this.matrix[row][col] = ++value;
-            }
-        }
+        this.matrix = seed(this.rows, this.cols);
     }
 
     void rotateCounterClockwise() {
@@ -35,22 +29,11 @@ class MatrixFlipperTake4 {
     }
 
     void dump() {
-        final StringBuilder dump = new StringBuilder();
-        for (int row = 0; row < this.rows; row++) {
-            for (int col = 0; col < this.cols; col++) {
-                dump.append(this.matrix[row][col]);
-                if (col < this.cols - 1) {
-                    dump.append("\t");
-                }
-            }
-            dump.append("\n");
-        }
-        System.out.println(dump.toString());
+        stdout(this.rows, this.cols, this.matrix);
     }
 
     public static void main(String[] args) {
         final MatrixFlipperTake4 matrixFlipper = new MatrixFlipperTake4(7, 7);
-        matrixFlipper.seed();
 
         matrixFlipper.dump();
 

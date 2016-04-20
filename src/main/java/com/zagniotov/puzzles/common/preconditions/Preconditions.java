@@ -1,4 +1,4 @@
-package com.zagniotov.puzzles.linguisticchains.common.preconditions;
+package com.zagniotov.puzzles.common.preconditions;
 
 
 /**

@@ -36,25 +36,7 @@ public class EvenOddSortTake2Test {
     public void shouldReturnSortedString() throws Exception {
         final EvenOddSortTake2 evenOddSortTake2 = new EvenOddSortTake2();
 
-        String result = evenOddSortTake2.segregate("12");
-        assertEquals("21", result);
-
-        result = evenOddSortTake2.segregate("12345");
-        assertEquals("42315", result);
-
-        result = evenOddSortTake2.segregate("2222222");
-        assertEquals("2222222", result);
-
-        result = evenOddSortTake2.segregate("211111");
-        assertEquals("211111", result);
-
-        result = evenOddSortTake2.segregate("212111");
-        assertEquals("221111", result);
-
-        result = evenOddSortTake2.segregate("0");
-        assertEquals("0", result);
-
-        result = evenOddSortTake2.segregate("23232323");
-        assertEquals("22223333", result);
+        String result = evenOddSortTake2.segregate("1222112221");
+        assertEquals("2222221111", result);
     }
 }

@@ -2,6 +2,9 @@ package com.zagniotov.puzzles.arrays;
 
 import java.util.Arrays;
 
+import static com.zagniotov.puzzles.common.Utils.seed;
+import static com.zagniotov.puzzles.common.Utils.stdout;
+
 /**
  * Find coordinates of a needle in 2D haystack
  * <p>
@@ -23,33 +26,14 @@ public class BinarySearch2DArray {
     BinarySearch2DArray(final int rows, final int cols) {
         this.rows = rows;
         this.cols = cols;
-        this.matrix = new int[rows][cols];
-    }
-
-    void seed() {
-        int value = 0;
-        for (int row = 0; row < this.rows; row++) {
-            for (int col = 0; col < this.cols; col++) {
-                this.matrix[row][col] = ++value;
-            }
-        }
+        this.matrix = seed(rows, cols);
     }
 
     void dump() {
-        final StringBuilder dump = new StringBuilder();
-        for (int row = 0; row < this.rows; row++) {
-            for (int col = 0; col < this.cols; col++) {
-                dump.append(this.matrix[row][col]);
-                if (col < this.cols - 1) {
-                    dump.append("\t");
-                }
-            }
-            dump.append("\n");
-        }
-        System.out.println(dump.toString());
+        stdout(this.rows, this.cols, this.matrix);
     }
 
-    int[] coordinatesWithoutRecursion(final int needle) {
+    int[] coordinates(final int needle) {
 
         int row = 0;
         int col = this.cols - 1;
@@ -72,14 +56,10 @@ public class BinarySearch2DArray {
 
     public static void main(String[] args) {
         final BinarySearch2DArray binarySearch2DArray = new BinarySearch2DArray(7, 7);
-        binarySearch2DArray.seed();
 
         binarySearch2DArray.dump();
 
-        int[] coordinates = binarySearch2DArray.coordinatesWithoutRecursion(38);
+        int[] coordinates = binarySearch2DArray.coordinates(38);
         System.out.println(Arrays.toString(coordinates));
-
-        //coordinates = binarySearch2DArray.coordinatesWithoutRecursion(49);
-        //System.out.println(Arrays.toString(coordinates));
     }
 }

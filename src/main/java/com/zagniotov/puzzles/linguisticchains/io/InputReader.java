@@ -1,6 +1,6 @@
 package com.zagniotov.puzzles.linguisticchains.io;
 
-import com.zagniotov.puzzles.linguisticchains.common.annotations.VisibleForTesting;
+import com.zagniotov.puzzles.common.annotations.VisibleForTesting;
 
 import java.io.BufferedReader;
 import java.io.IOException;

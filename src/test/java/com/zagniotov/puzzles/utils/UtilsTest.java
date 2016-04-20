@@ -1,26 +1,27 @@
-package com.zagniotov.puzzles.linguisticchains.utils;
+package com.zagniotov.puzzles.utils;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.runners.MockitoJUnitRunner;
 
+import static com.zagniotov.puzzles.common.Utils.removeCharAt;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(MockitoJUnitRunner.class)
-public class StringUtilsTest {
+public class UtilsTest {
 
     @Test
     public void shouldRemoveFirstCharacterFromString() throws Exception {
-        assertEquals("lex", StringUtils.removeCharAt(0, "Alex"));
+        assertEquals("lex", removeCharAt(0, "Alex"));
     }
 
     @Test
     public void shouldRemoveLastCharacterFromString() throws Exception {
-        assertEquals("Ale", StringUtils.removeCharAt("Alex".length() - 1, "Alex"));
+        assertEquals("Ale", removeCharAt("Alex".length() - 1, "Alex"));
     }
 
     @Test
     public void shouldRemoveMiddleCharacterFromString() throws Exception {
-        assertEquals("Orage", StringUtils.removeCharAt(3, "Orange"));
+        assertEquals("Orage", removeCharAt(3, "Orange"));
     }
 }

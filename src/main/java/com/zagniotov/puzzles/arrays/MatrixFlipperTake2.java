@@ -1,6 +1,9 @@
 package com.zagniotov.puzzles.arrays;
 
 
+import static com.zagniotov.puzzles.common.Utils.seed;
+import static com.zagniotov.puzzles.common.Utils.stdout;
+
 class MatrixFlipperTake2 {
 
     private final int rows;
@@ -10,18 +13,8 @@ class MatrixFlipperTake2 {
     MatrixFlipperTake2(final int rows, final int cols) {
         this.rows = rows;
         this.cols = cols;
-        this.matrix = new int[rows][cols];
+        this.matrix = seed(this.rows, this.cols);
     }
-
-    void seed() {
-        int value = 0;
-        for (int row = 0; row < this.rows; row++) {
-            for (int col = 0; col < this.cols; col++) {
-                this.matrix[row][col] = ++value;
-            }
-        }
-    }
-
 
     void rotateClockwise() {
         int cache;
@@ -39,22 +32,12 @@ class MatrixFlipperTake2 {
     }
 
     void dump() {
-        final StringBuilder dump = new StringBuilder();
-        for (int row = 0; row < this.rows; row++) {
-            for (int col = 0; col < this.cols; col++) {
-                dump.append(this.matrix[row][col]);
-                if (col < this.cols - 1) {
-                    dump.append("\t");
-                }
-            }
-            dump.append("\n");
-        }
-        System.out.println(dump.toString());
+        stdout(this.rows, this.cols, this.matrix);
     }
 
     public static void main(String[] args) {
         final MatrixFlipperTake2 matrixFlipperTake2 = new MatrixFlipperTake2(7, 7);
-        matrixFlipperTake2.seed();
+
         matrixFlipperTake2.dump();
 
         matrixFlipperTake2.rotateClockwise();

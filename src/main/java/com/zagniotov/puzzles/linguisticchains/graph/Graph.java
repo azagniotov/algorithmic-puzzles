@@ -1,11 +1,12 @@
 package com.zagniotov.puzzles.linguisticchains.graph;
 
-import com.zagniotov.puzzles.linguisticchains.common.annotations.VisibleForTesting;
-import com.zagniotov.puzzles.linguisticchains.common.preconditions.Preconditions;
-import com.zagniotov.puzzles.linguisticchains.utils.StringUtils;
+import com.zagniotov.puzzles.common.annotations.VisibleForTesting;
+import com.zagniotov.puzzles.common.preconditions.Preconditions;
 
 import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
+
+import static com.zagniotov.puzzles.common.Utils.removeCharAt;
 
 
 public final class Graph {
@@ -69,7 +70,7 @@ public final class Graph {
             }
 
             previouslyRemovedLetter = letterToRemove;
-            final String currentChild = StringUtils.removeCharAt(removeIdx, parentWord);
+            final String currentChild = removeCharAt(removeIdx, parentWord);
             final int currentChildLength = currentChild.length();
             if (!wordsByLength.containsKey(currentChildLength)) {
                 break;

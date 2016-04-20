@@ -1,4 +1,4 @@
-package com.zagniotov.puzzles.linguisticchains.common.annotations;
+package com.zagniotov.puzzles.common.annotations;
 
 import java.lang.annotation.Retention;
 

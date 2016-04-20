@@ -1,5 +1,8 @@
 package com.zagniotov.puzzles.strings;
 
+import static com.zagniotov.puzzles.common.Utils.isEven;
+import static com.zagniotov.puzzles.common.Utils.isOdd;
+
 /**
  * - Takes in a string of numeric characters (positive ints only) and shifts all the odd characters to the right,
  * while keeping all the even characters on the left.
@@ -53,13 +56,5 @@ class EvenOddSortTake1 {
         }
 
         return String.valueOf(chars);
-    }
-
-    private boolean isEven(final int value) {
-        return value % 2 == 0;
-    }
-
-    private boolean isOdd(final int value) {
-        return !isEven(value);
     }
 }

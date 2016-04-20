@@ -1,5 +1,10 @@
 package com.zagniotov.puzzles.strings;
 
+import com.zagniotov.puzzles.common.Utils;
+
+import static com.zagniotov.puzzles.common.Utils.isEven;
+import static com.zagniotov.puzzles.common.Utils.isOdd;
+
 /**
  * - Takes in a string of numeric characters (positive ints only) and shifts all the odd characters to the right,
  * while keeping all the even characters on the left.
@@ -27,10 +32,12 @@ class EvenOddSortTake2 {
         while (leftPointer < rightPointer) {
 
             while (isEven(chars[leftPointer]) && leftPointer < rightPointer) {
+                System.out.println("Checked left");
                 leftPointer++;
             }
 
             while (isOdd(chars[rightPointer]) && leftPointer < rightPointer) {
+                System.out.println("Checked right");
                 rightPointer--;
             }
 
@@ -47,11 +54,4 @@ class EvenOddSortTake2 {
         return String.valueOf(chars);
     }
 
-    private boolean isEven(final int value) {
-        return value % 2 == 0;
-    }
-
-    private boolean isOdd(final int value) {
-        return !isEven(value);
-    }
 }

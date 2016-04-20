@@ -1,6 +1,8 @@
 package com.zagniotov.puzzles.trees;
 
 
+import com.zagniotov.puzzles.common.Node;
+
 public class BalancedBinaryTreeTake1 {
     public static void main(String[] args) {
         final int[] data =
