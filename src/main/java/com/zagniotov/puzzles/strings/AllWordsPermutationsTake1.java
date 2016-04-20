@@ -6,9 +6,9 @@ import static com.zagniotov.puzzles.common.Utils.stdout;
  * - The words in the string are unique, i.e.: solution does not eliminate duplicate permutations
  * - The time complexity of this solution is O(n!)
  */
-class AllWordsPermutations {
+class AllWordsPermutationsTake1 {
 
-    AllWordsPermutations() {
+    AllWordsPermutationsTake1() {
 
     }
 
@@ -36,8 +36,8 @@ class AllWordsPermutations {
     }
 
     public static void main(String[] args) {
-        final AllWordsPermutations allWordsPermutations = new AllWordsPermutations();
+        final AllWordsPermutationsTake1 allWordsPermutationsTake1 = new AllWordsPermutationsTake1();
 
-        allWordsPermutations.permuteWords("hello happy world".split("\\s+"));
+        allWordsPermutationsTake1.permuteWords("hello happy world".split("\\s+"));
     }
 }

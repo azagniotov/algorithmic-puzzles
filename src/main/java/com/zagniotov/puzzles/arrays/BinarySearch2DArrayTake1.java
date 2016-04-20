@@ -17,13 +17,13 @@ import static com.zagniotov.puzzles.common.Utils.stdout;
  * The worst case scenario is where it ended up in the opposite corner of the matrix,
  * which takes at most 2N steps. Therefore, ths algorithm runs in O(n) time.
  */
-public class BinarySearch2DArray {
+public class BinarySearch2DArrayTake1 {
 
     private final int rows;
     private final int cols;
     private final int[][] matrix;
 
-    BinarySearch2DArray(final int rows, final int cols) {
+    BinarySearch2DArrayTake1(final int rows, final int cols) {
         this.rows = rows;
         this.cols = cols;
         this.matrix = seed(rows, cols);
@@ -55,11 +55,11 @@ public class BinarySearch2DArray {
     }
 
     public static void main(String[] args) {
-        final BinarySearch2DArray binarySearch2DArray = new BinarySearch2DArray(7, 7);
+        final BinarySearch2DArrayTake1 binarySearch2DArrayTake1 = new BinarySearch2DArrayTake1(7, 7);
 
-        binarySearch2DArray.dump();
+        binarySearch2DArrayTake1.dump();
 
-        int[] coordinates = binarySearch2DArray.coordinates(38);
+        int[] coordinates = binarySearch2DArrayTake1.coordinates(38);
         System.out.println(Arrays.toString(coordinates));
     }
 }

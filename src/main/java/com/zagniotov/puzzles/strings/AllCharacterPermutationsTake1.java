@@ -4,9 +4,9 @@ package com.zagniotov.puzzles.strings;
  * - The characters in the string are unique, i.e.: solution does not eliminate duplicate permutations
  * - The time complexity of these solutions is O(n!)
  */
-class AllCharacterPermutations {
+class AllCharacterPermutationsTake1 {
 
-    AllCharacterPermutations() {
+    AllCharacterPermutationsTake1() {
 
     }
 
@@ -52,10 +52,10 @@ class AllCharacterPermutations {
     }
 
     public static void main(String[] args) {
-        final AllCharacterPermutations allCharacterPermutations = new AllCharacterPermutations();
+        final AllCharacterPermutationsTake1 allCharacterPermutationsTake1 = new AllCharacterPermutationsTake1();
 
-        allCharacterPermutations.permuteString("abc");
+        allCharacterPermutationsTake1.permuteString("abc");
         System.out.println("\n\n");
-        allCharacterPermutations.permuteArray("abc".toCharArray());
+        allCharacterPermutationsTake1.permuteArray("abc".toCharArray());
     }
 }
