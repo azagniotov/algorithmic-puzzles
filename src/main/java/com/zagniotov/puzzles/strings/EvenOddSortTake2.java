@@ -32,12 +32,10 @@ class EvenOddSortTake2 {
         while (leftPointer < rightPointer) {
 
             while (isEven(chars[leftPointer]) && leftPointer < rightPointer) {
-                System.out.println("Checked left");
                 leftPointer++;
             }
 
             while (isOdd(chars[rightPointer]) && leftPointer < rightPointer) {
-                System.out.println("Checked right");
                 rightPointer--;
             }
 

@@ -29,8 +29,8 @@ class AllWordsPermutationsTake1 {
         }
     }
 
-    private static void swap(String[] words, final int leftPointer, final int rightPointer) {
-        String cache = words[leftPointer];
+    private static void swap(final String[] words, final int leftPointer, final int rightPointer) {
+        final String cache = words[leftPointer];
         words[leftPointer] = words[rightPointer];
         words[rightPointer] = cache;
     }
