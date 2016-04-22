@@ -4,6 +4,7 @@ import com.zagniotov.puzzles.common.Utils;
 
 import static com.zagniotov.puzzles.common.Utils.isEven;
 import static com.zagniotov.puzzles.common.Utils.isOdd;
+import static com.zagniotov.puzzles.common.Utils.swapTwo;
 
 /**
  * - Takes in a string of numeric characters (positive ints only) and shifts all the odd characters to the right,
@@ -40,9 +41,7 @@ class EvenOddSortTake2 {
             }
 
             if (leftPointer < rightPointer) {
-                char cache = chars[leftPointer];
-                chars[leftPointer] = chars[rightPointer];
-                chars[rightPointer] = cache;
+                swapTwo(chars, leftPointer, rightPointer);
 
                 leftPointer++;
                 rightPointer--;

@@ -54,4 +54,26 @@ public final class Utils {
     public static String removeCharAt(final int position, final String original) {
         return original.substring(0, position) + original.substring(position + 1);
     }
+
+    public static void swapTwo(char[] chars, final int leftPointer, final int rightPointer) {
+        char cache = chars[leftPointer];
+        chars[leftPointer] = chars[rightPointer];
+        chars[rightPointer] = cache;
+    }
+
+    public static void swapTwo(String[] words, final int leftPointer, final int rightPointer) {
+        String cache = words[leftPointer];
+        words[leftPointer] = words[rightPointer];
+        words[rightPointer] = cache;
+    }
+
+    public static void swapAll(char[] chars, int leftPointer, int rightPointer) {
+        while (leftPointer < rightPointer) {
+            char cache = chars[leftPointer];
+            chars[leftPointer] = chars[rightPointer];
+            chars[rightPointer] = cache;
+            leftPointer++;
+            rightPointer--;
+        }
+    }
 }

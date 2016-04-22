@@ -14,7 +14,7 @@ A Java program that finds the word from which one can remove the most letters, o
 * Reverse sentence words, while keeping the characters in the correct order
 * All character permutations in a string
 * All character permutations in an array
-* All word permutations in a sentence 
+* All word permutations in a sentence
 * Regex parser
 
 #### Trees

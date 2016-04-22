@@ -1,6 +1,7 @@
 package com.zagniotov.puzzles.strings;
 
 import static com.zagniotov.puzzles.common.Utils.stdout;
+import static com.zagniotov.puzzles.common.Utils.swapTwo;
 
 /**
  * - The words in the string are unique, i.e.: solution does not eliminate duplicate permutations
@@ -22,17 +23,11 @@ class AllWordsPermutationsTake1 {
             stdout(words);
         } else {
             for (int idx = 0; idx < length; idx++) {
-                swap(words, idx, length - 1);
+                swapTwo(words, idx, length - 1);
                 permuteWords(words, length - 1);
-                swap(words, idx, length - 1);
+                swapTwo(words, idx, length - 1);
             }
         }
-    }
-
-    private static void swap(final String[] words, final int leftPointer, final int rightPointer) {
-        final String cache = words[leftPointer];
-        words[leftPointer] = words[rightPointer];
-        words[rightPointer] = cache;
     }
 
     public static void main(String[] args) {

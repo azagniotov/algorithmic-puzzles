@@ -1,6 +1,8 @@
 package com.zagniotov.puzzles.strings;
 
 
+import static com.zagniotov.puzzles.common.Utils.swapAll;
+
 class ReverseStringCharactersTake1 {
 
     ReverseStringCharactersTake1() {
@@ -14,18 +16,7 @@ class ReverseStringCharactersTake1 {
         }
 
         final char[] chars = subject.toCharArray();
-        int leftPointer = 0;
-        int rightPointer = chars.length - 1;
-
-        while (leftPointer < rightPointer) {
-            char cache = chars[leftPointer];
-
-            chars[leftPointer] = chars[rightPointer];
-            chars[rightPointer] = cache;
-
-            leftPointer++;
-            rightPointer--;
-        }
+        swapAll(chars, 0, chars.length - 1);
 
         return String.valueOf(chars);
     }
