@@ -2,7 +2,6 @@ package com.zagniotov.puzzles.strings;
 
 
 import static com.zagniotov.puzzles.common.Utils.swapAll;
-import static com.zagniotov.puzzles.common.Utils.swapTwo;
 
 class ReverseWordsTake1 {
 
