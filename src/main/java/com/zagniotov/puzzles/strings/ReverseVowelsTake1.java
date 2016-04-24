@@ -25,7 +25,13 @@ class ReverseVowelsTake1 {
 
             if (leftPointer < rightPointer) {
                 char cache = chars[leftPointer];
-                chars[leftPointer] = chars[rightPointer];
+                char right = chars[rightPointer];
+                if (cache == right) {
+                    leftPointer++;
+                    rightPointer--;
+                    continue;
+                }
+                chars[leftPointer] = right;
                 chars[rightPointer] = cache;
                 leftPointer++;
                 rightPointer--;

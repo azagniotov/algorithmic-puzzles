@@ -21,7 +21,7 @@ public class CountLeavesTake1 {
         } else if (root.isLeaf()) {
             return 1;
         } else {
-            return countLeaves(root.getLeftChild()) + countLeaves(root.getRightChild());
+            return countLeaves(root.left) + countLeaves(root.right);
         }
     }
 }

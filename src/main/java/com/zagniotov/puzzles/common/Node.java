@@ -1,38 +1,26 @@
 package com.zagniotov.puzzles.common;
 
 public final class Node {
-    private final int value;
-    private final Node leftChild;
-    private final Node rightChild;
+    public final int value;
+    public final Node left;
+    public final Node right;
 
-    public Node(final int value, final Node leftChild, final Node rightChild) {
+    public Node(final int value, final Node left, final Node right) {
         this.value = value;
-        this.leftChild = leftChild;
-        this.rightChild = rightChild;
+        this.left = left;
+        this.right = right;
     }
 
     public boolean isLeaf() {
-        return leftChild == null && rightChild == null;
-    }
-
-    public int getValue() {
-        return value;
-    }
-
-    public Node getLeftChild() {
-        return leftChild;
-    }
-
-    public Node getRightChild() {
-        return rightChild;
+        return this.left == null && this.right == null;
     }
 
     @Override
     public String toString() {
         return "Node{" +
-                "value=" + getValue() +
-                ", leftChild=" + getLeftChild() +
-                ", rightChild=" + getRightChild() +
+                "value=" + value +
+                ", left=" + left +
+                ", right=" + right +
                 '}';
     }
 }
