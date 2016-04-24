@@ -14,6 +14,14 @@ public final class Utils {
         return !isEven(value);
     }
 
+    public static boolean isVowel(final char c) {
+        return "AEIOUaeiou".indexOf(c) != -1;
+    }
+
+    public static boolean isConsonant(final char c) {
+        return !isVowel(c);
+    }
+
     public static int[][] seed(final int rows, final int cols) {
         final int[][] matrix = new int[rows][cols];
         int value = 0;
