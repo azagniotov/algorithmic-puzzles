@@ -12,6 +12,7 @@ A Java program that finds the word from which one can remove the most letters, o
 #### Strings
 * Segregate even/odd numeric characters in a string
 * Reverse word characters
+* Reverse word vowels
 * Reverse sentence words, while keeping the characters in the correct order
 * All character permutations in a string
 * All word permutations in a sentence
