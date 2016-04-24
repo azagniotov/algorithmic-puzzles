@@ -12,23 +12,6 @@ class AllCharacterPermutationsTake1 {
 
     }
 
-    // Permutes not in order
-    void permuteArray(final char[] chars) {
-        permuteArray(chars, chars.length);
-    }
-
-    private void permuteArray(final char[] chars, final int length) {
-        if (length == 1) {
-            System.out.println(chars);
-        } else {
-            for (int idx = 0; idx < length; idx++) {
-                swapTwo(chars, idx, length - 1);
-                permuteArray(chars, length - 1);
-                swapTwo(chars, idx, length - 1);
-            }
-        }
-    }
-
     // Permutes in order
     void permuteString(final String subject) {
         permuteString("", subject);
@@ -51,7 +34,5 @@ class AllCharacterPermutationsTake1 {
         final AllCharacterPermutationsTake1 allCharacterPermutationsTake1 = new AllCharacterPermutationsTake1();
 
         allCharacterPermutationsTake1.permuteString("abc");
-        System.out.println("\n\n");
-        allCharacterPermutationsTake1.permuteArray("abc".toCharArray());
     }
 }
