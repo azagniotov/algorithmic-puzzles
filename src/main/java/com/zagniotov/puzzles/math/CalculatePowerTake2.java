@@ -1,16 +1,16 @@
 package com.zagniotov.puzzles.math;
 
-class CalculatePowerTake1 {
+class CalculatePowerTake2 {
 
 
-    CalculatePowerTake1() {
+    CalculatePowerTake2() {
 
     }
 
     double pow(final int number, final int exponent) {
         if (exponent == 0) {
             return 1;
-        } else if (exponent == 1 || number == 1) {
+        } else if (number == 1 || exponent == 1) {
             return number;
         } else {
             final double result = number * pow(number, Math.abs(exponent) - 1);
