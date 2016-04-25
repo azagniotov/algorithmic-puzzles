@@ -22,6 +22,9 @@ A Java program that finds the word from which one can remove the most letters, o
 #### Trees
 * Create a balanced binary tree
 * Count leaf nodes in a tree
+* Find min depth of a tree
+* Find max depth of a tree
+* Invert a binary tree
 
 #### Math
 * Find missing number in sorted & distinct array of numbers
