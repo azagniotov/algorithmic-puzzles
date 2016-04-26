@@ -27,5 +27,8 @@ public class MoveZeroesTake1Test {
 
         result = moveZeroesTake1.moveZeroes(new int[]{1, 1, 1, 1, 1, 0, 1});
         assertEquals(Arrays.toString(new int[]{1, 1, 1, 1, 1, 1, 0}), Arrays.toString(result));
+
+        result = moveZeroesTake1.moveZeroes(new int[]{1, 0, 1, 1, 1, 1, 1});
+        assertEquals(Arrays.toString(new int[]{1, 1, 1, 1, 1, 1, 0}), Arrays.toString(result));
     }
 }
