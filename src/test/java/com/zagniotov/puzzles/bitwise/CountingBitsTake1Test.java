@@ -17,9 +17,6 @@ public class CountingBitsTake1Test {
         assertEquals(Arrays.toString(new int[]{0, 1, 1, 2, 1, 2}), Arrays.toString(result));
 
         result = countingBitsTake1.countBits(7);
-        System.out.println(result[7 & 6]);
-        System.out.println(result[7 & 6] + 1);
-
         assertEquals(Arrays.toString(new int[]{0, 1, 1, 2, 1, 2, 2, 3}), Arrays.toString(result));
     }
 }

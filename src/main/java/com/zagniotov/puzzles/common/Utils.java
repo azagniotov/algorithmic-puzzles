@@ -69,6 +69,12 @@ public final class Utils {
         chars[rightPointer] = cache;
     }
 
+    public static void swapTwo(int[] chars, final int leftPointer, final int rightPointer) {
+        int cache = chars[leftPointer];
+        chars[leftPointer] = chars[rightPointer];
+        chars[rightPointer] = cache;
+    }
+
     public static void swapTwo(String[] words, final int leftPointer, final int rightPointer) {
         String cache = words[leftPointer];
         words[leftPointer] = words[rightPointer];
