@@ -1,8 +1,5 @@
 ## Various Brainteasing Algorithms
 
-#### Linguistic chains
-A Java program that finds the word from which one can remove the most letters, one at a time, such that each resulting word is itself a valid word
-
 #### Arrays
 * Rotate 2D array 90 degrees (clockwise and counter-clockwise
 * Binary search in sorted array
@@ -34,3 +31,6 @@ A Java program that finds the word from which one can remove the most letters, o
 * Power of 2
 * Power of 4
 * Count 1's in a binary representation of a number (several ways)
+
+#### Linguistic chains
+A Java program that finds the word from which one can remove the most letters, one at a time, such that each resulting word is itself a valid word
