@@ -29,3 +29,8 @@ A Java program that finds the word from which one can remove the most letters, o
 #### Math
 * Find missing number in sorted & distinct array of numbers
 * Raise number to a power
+
+#### Bitwise
+* Power of 2
+* Power of 4
+* Count 1's in a binary representation of a number (several ways)

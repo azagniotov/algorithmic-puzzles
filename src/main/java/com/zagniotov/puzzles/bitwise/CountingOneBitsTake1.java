@@ -70,7 +70,7 @@ public class CountingOneBitsTake1 {
      * When you subtract a number by 1, all of the lowest bits change up to and including the lowest 1 bit; but the
      * rest of the bits stay the same. So if I do a bitwise AND of N with N − 1, essentially I will remove the last one
      * bit from N.
-     *
+     * <p>
      * Once we observe this, we have only to write code that counts how many times we can remove the final bit in
      * this way before we reach a number with no 1 bits at all (i.e., 0).
      */
@@ -93,5 +93,27 @@ public class CountingOneBitsTake1 {
         }
 
         return result;
+    }
+
+    //There are more efficient ways to count the 1s, but not very straight-forwards during an interview, although impressive!
+    //1. http://www.toves.org/books/bitops/ (3.3. A cleverer technique)
+    //2. https://yesteapea.wordpress.com/2013/03/03/counting-the-number-of-set-bits-in-an-integer/
+    //for 64 bit numbers
+    /*
+    int NumberOfSetBits64(long i)
+    {
+        i = i - ((i >> 1) & 0x5555555555555555);
+        i = (i & 0x3333333333333333) +
+                ((i >> 2) & 0x3333333333333333);
+        i = ((i + (i >> 4)) & 0x0F0F0F0F0F0F0F0F);
+        return (i*(0x0101010101010101))>>56;
+    }
+    */
+    //for 32 bit integers
+    int numberOfSetBits32(int i) {
+        i = i - ((i >> 1) & 0x55555555);
+        i = (i & 0x33333333) + ((i >> 2) & 0x33333333);
+        i = ((i + (i >> 4)) & 0x0F0F0F0F);
+        return (i * (0x01010101)) >> 24;
     }
 }
