@@ -45,10 +45,4 @@ public class CountingOneBitsTake1Test {
         assertEquals(Arrays.toString(new int[]{0, 1, 1, 2, 1, 2, 2, 3}), Arrays.toString(result));
     }
 
-    @Test
-    public void playground() throws Exception {
-        int n = 4;
-
-        System.out.println((n & n - 1));
-    }
 }

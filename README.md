@@ -32,6 +32,7 @@
 #### Math
 * Find missing number in sorted & distinct array of numbers
 * Raise number to a power
+* Test for prime
 
 #### Linguistic chains
 A Java program that finds the word from which one can remove the most letters, one at a time, such that each resulting word is itself a valid word

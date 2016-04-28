@@ -3,9 +3,9 @@ package com.zagniotov.puzzles.strings;
 
 import static com.zagniotov.puzzles.common.Utils.swapAll;
 
-class ReverseWordsTake1 {
+class ReverseWordsLocationsTake1 {
 
-    ReverseWordsTake1() {
+    ReverseWordsLocationsTake1() {
 
     }
 

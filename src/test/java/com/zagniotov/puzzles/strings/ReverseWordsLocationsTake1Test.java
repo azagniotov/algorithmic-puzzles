@@ -4,11 +4,11 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class ReverseWordsTake1Test {
+public class ReverseWordsLocationsTake1Test {
 
     @Test
     public void testReverse() throws Exception {
-        final ReverseWordsTake1 reverseStringWords = new ReverseWordsTake1();
+        final ReverseWordsLocationsTake1 reverseStringWords = new ReverseWordsLocationsTake1();
 
         String result = reverseStringWords.reverse("hey");
         assertEquals("hey", result);
