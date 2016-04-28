@@ -1,5 +1,10 @@
 ## Various Brainteasing Algorithms
 
+#### Bitwise
+* Power of 2
+* Power of 4
+* Count 1's in a binary representation of a number (several ways)
+
 #### Arrays
 * Rotate 2D array 90 degrees (clockwise and counter-clockwise
 * Binary search in sorted array
@@ -14,6 +19,7 @@
 * All character permutations in a string
 * All word permutations in a sentence
 * Check if two strings are anagrams
+* Check if two strings are isomorphic
 * Regex parser
 
 #### Trees
@@ -26,11 +32,6 @@
 #### Math
 * Find missing number in sorted & distinct array of numbers
 * Raise number to a power
-
-#### Bitwise
-* Power of 2
-* Power of 4
-* Count 1's in a binary representation of a number (several ways)
 
 #### Linguistic chains
 A Java program that finds the word from which one can remove the most letters, one at a time, such that each resulting word is itself a valid word
