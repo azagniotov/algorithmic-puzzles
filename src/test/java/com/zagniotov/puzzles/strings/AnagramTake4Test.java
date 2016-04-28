@@ -17,6 +17,7 @@ public class AnagramTake4Test {
         assertTrue(anagramTake4.isAnagram("debitcard", "badcredit"));
         assertTrue(anagramTake4.isAnagram("DORMITORY", "DIRTYROOM"));
         assertTrue(anagramTake4.isAnagram("ASTRONOMERS", "NOMORESTARS"));
+        assertTrue(anagramTake4.isAnagram("aaaba", "aaaab"));
 
         assertFalse(anagramTake4.isAnagram("toss", "snot"));
         assertFalse(anagramTake4.isAnagram("joy", "enjoy"));
