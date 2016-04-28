@@ -1,10 +1,5 @@
 package com.zagniotov.puzzles.strings;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
-
 /**
  * Given two strings s and t, determine if they are isomorphic.
  * Two strings are isomorphic if the characters in s can be replaced to get t.
@@ -22,16 +17,17 @@ import java.util.Set;
  * Note:
  * You may assume both s and t have the same length.
  */
-class IsomorphicStringTake1 {
+class IsomorphicStringTake2 {
 
 
-    IsomorphicStringTake1() {
+    IsomorphicStringTake2() {
 
     }
 
+    // Assumes that strings will contain ASCII characters [0-9a-zA-Z]
     public boolean isIsomorphic(final String first, final String second) {
-        final Map<Character, Character> paths = new HashMap<>();
-        final Set<Character> mapped = new HashSet<>();
+        final char[] paths = new char[128];
+        final char[] mapped = new char[128]; //Enough space to cover numeric values of ASCII characters [0-9a-zA-Z]
 
         final char[] firstChars = first.toCharArray();
         final char[] secondChars = second.toCharArray();
@@ -43,20 +39,21 @@ class IsomorphicStringTake1 {
 
         for (int idx = 0; idx < firstCharsLength; idx++) {
             char currentChar = firstChars[idx];
-            if (!paths.containsKey(currentChar)) {
+            if (paths[currentChar] == 0) {
                 char destinationChar = secondChars[idx];
-                if (mapped.contains(destinationChar)) {
+                if (mapped[destinationChar] == destinationChar) {
                     //No two characters may map to the same character
                     return false;
                 } else {
-                    paths.put(currentChar, destinationChar);
-                    mapped.add(destinationChar);
+                    paths[currentChar] = destinationChar;
+                    mapped[destinationChar] = destinationChar;
                 }
             }
-
-            firstChars[idx] = paths.get(currentChar);
+            if (paths[currentChar] != secondChars[idx]) {
+                return false;
+            }
         }
 
-        return String.valueOf(firstChars).equals(second);
+        return true;
     }
 }
