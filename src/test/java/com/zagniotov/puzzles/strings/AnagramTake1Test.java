@@ -13,15 +13,12 @@ public class AnagramTake1Test {
 
         final AnagramTake1 anagramTake1 = new AnagramTake1();
 
-        assertTrue(anagramTake1.isAnagram("MotherInLaw", "HitlerWoman"));
-        assertTrue(anagramTake1.isAnagram("keEp", "peeK"));
-        assertTrue(anagramTake1.isAnagram("SiLeNtCAT", "LisTenAcT"));
-        assertTrue(anagramTake1.isAnagram("DebitCard", "BadCredit"));
-        assertTrue(anagramTake1.isAnagram("SchoolMASTER", "TheClassROOM"));
-        assertTrue(anagramTake1.isAnagram("DORMITORY", "DirtyRoom"));
+        assertTrue(anagramTake1.isAnagram("motherinlaw", "hitlerwoman"));
+        assertTrue(anagramTake1.isAnagram("debitcard", "badcredit"));
+        assertTrue(anagramTake1.isAnagram("DORMITORY", "DIRTYROOM"));
         assertTrue(anagramTake1.isAnagram("ASTRONOMERS", "NOMORESTARS"));
 
-        assertFalse(anagramTake1.isAnagram("Toss", "Shot"));
+        assertFalse(anagramTake1.isAnagram("toss", "snot"));
         assertFalse(anagramTake1.isAnagram("joy", "enjoy"));
         assertFalse(anagramTake1.isAnagram("joy", "enjoy"));
         assertFalse(anagramTake1.isAnagram("aaaaa", "baaaa"));

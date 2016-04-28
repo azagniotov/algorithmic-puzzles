@@ -26,8 +26,8 @@ class IsomorphicStringTake2 {
 
     // Assumes that strings will contain ASCII characters [0-9a-zA-Z]
     public boolean isIsomorphic(final String first, final String second) {
-        final char[] paths = new char[128];
-        final char[] mapped = new char[128]; //Enough space to cover numeric values of ASCII characters [0-9a-zA-Z]
+        final char[] paths = new char[127];
+        final char[] mapped = new char[127]; //Enough space to cover numeric values of ASCII characters [0-9a-zA-Z]
 
         final char[] firstChars = first.toCharArray();
         final char[] secondChars = second.toCharArray();
