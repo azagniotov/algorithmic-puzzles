@@ -4,12 +4,15 @@
 * Power of 2
 * Power of 4
 * Count 1's in a binary representation of a number (several ways)
+* Find an array element that appears once among others that appear twice
+* Find an array element that appears twice among others that appear once
 
 #### Arrays
 * Rotate 2D array 90 degrees (clockwise and counter-clockwise
 * Binary search in sorted array
 * Binary search in 2D sorted array
 * All character permutations in an array
+* Find an array element that appears twice among others that appear once
 
 #### Strings
 * Segregate even/odd numeric characters in a string
@@ -30,7 +33,7 @@
 * Invert a binary tree
 
 #### Math
-* Find missing number in sorted & distinct array of numbers
+* Find missing number in array of numbers
 * Raise number to a power
 * Test for prime
 
