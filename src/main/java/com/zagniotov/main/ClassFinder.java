@@ -11,12 +11,13 @@ final class ClassFinder {
     private static final char DIR_SEPARATOR = '/';
     private static final String CLASS_FILE_SUFFIX = ".class";
     private static final String BAD_PACKAGE_ERROR = "Unable to get resources from path '%s'. Are you sure the package '%s' exists?";
-    private final Set<String> packagesToSkip = new HashSet<>(Arrays.asList("linguisticchains", "common"));
 
     private final String rootPackage;
+    private final Set<String> packagesToSkip;
 
-    ClassFinder(final String rootPackage) {
+    ClassFinder(final String rootPackage, final Set<String> packagesToSkip) {
         this.rootPackage = rootPackage;
+        this.packagesToSkip = packagesToSkip;
     }
 
     public Set<String> find() {
