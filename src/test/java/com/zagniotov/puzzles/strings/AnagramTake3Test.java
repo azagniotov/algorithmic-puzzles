@@ -19,7 +19,7 @@ public class AnagramTake3Test {
         assertTrue(anagramTake3.isAnagram("ASTRONOMERS", "NOMORESTARS"));
 
         assertFalse(anagramTake3.isAnagram("toss", "snot"));
-        assertFalse(anagramTake3.isAnagram("joy", "enjoy"));
+        assertFalse(anagramTake3.isAnagram("benjo", "enjoy"));
         assertFalse(anagramTake3.isAnagram("joy", "enjoy"));
         assertFalse(anagramTake3.isAnagram("aaaaa", "baaaa"));
     }

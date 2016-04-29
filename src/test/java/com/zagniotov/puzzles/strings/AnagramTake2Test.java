@@ -19,7 +19,7 @@ public class AnagramTake2Test {
         assertTrue(anagramTake2.isAnagram("ASTRONOMERS", "NOMORESTARS"));
 
         assertFalse(anagramTake2.isAnagram("toss", "snot"));
-        assertFalse(anagramTake2.isAnagram("joy", "enjoy"));
+        assertFalse(anagramTake2.isAnagram("benjo", "enjoy"));
         assertFalse(anagramTake2.isAnagram("joy", "enjoy"));
         assertFalse(anagramTake2.isAnagram("aaaaa", "baaaa"));
     }

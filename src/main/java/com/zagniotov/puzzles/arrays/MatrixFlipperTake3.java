@@ -15,19 +15,6 @@ class MatrixFlipperTake3 {
         this.matrix = seed(this.rows, this.cols);
     }
 
-    void rotateClockwise() {
-        int cache;
-        for (int row = 0; row < this.rows / 2; row++) {
-            for (int col = 0; col < Math.ceil((double) this.cols / 2); col++) {
-                cache = this.matrix[row][col];
-                this.matrix[row][col] = this.matrix[this.rows - 1 - col][row];
-                this.matrix[this.rows - 1 - col][row] = this.matrix[this.rows - 1 - row][this.cols - 1 - col];
-                this.matrix[this.rows - 1 - row][this.cols - 1 - col] = this.matrix[col][this.cols - 1 - row];
-                this.matrix[col][this.cols - 1 - row] = cache;
-            }
-        }
-    }
-
     void rotateCounterClockwise() {
         int cache;
         for (int row = 0; row < this.rows / 2; row++) {
@@ -46,16 +33,12 @@ class MatrixFlipperTake3 {
     }
 
     public static void main(String[] args) {
-        final MatrixFlipperTake3 matrixFlipperTake3 = new MatrixFlipperTake3(7, 7);
+        final MatrixFlipperTake3 matrixFlipper = new MatrixFlipperTake3(7, 7);
 
-        matrixFlipperTake3.dump();
+        matrixFlipper.dump();
 
-        matrixFlipperTake3.rotateClockwise();
+        matrixFlipper.rotateCounterClockwise();
 
-        matrixFlipperTake3.dump();
-
-        matrixFlipperTake3.rotateCounterClockwise();
-
-        matrixFlipperTake3.dump();
+        matrixFlipper.dump();
     }
 }

@@ -2,7 +2,7 @@ package com.zagniotov.puzzles.trees;
 
 import com.zagniotov.puzzles.common.Node;
 
-class BinaryTreeMaxDepth {
+class BinaryTreeMaxDepthTake1 {
 
     public int maxDepth(final Node root) {
         if (root == null) {

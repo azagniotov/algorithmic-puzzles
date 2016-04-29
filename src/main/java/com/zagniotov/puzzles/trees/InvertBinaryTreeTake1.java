@@ -3,7 +3,7 @@ package com.zagniotov.puzzles.trees;
 import com.zagniotov.puzzles.common.Node;
 
 
-class InvertBinaryTree {
+class InvertBinaryTreeTake1 {
 
     /*
      Invert a tree from:

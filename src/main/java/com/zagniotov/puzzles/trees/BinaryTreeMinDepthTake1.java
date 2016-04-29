@@ -2,7 +2,7 @@ package com.zagniotov.puzzles.trees;
 
 import com.zagniotov.puzzles.common.Node;
 
-public class BinaryTreeMinDepth {
+public class BinaryTreeMinDepthTake1 {
 
     public int minDepth(final Node root) {
         if (root == null) {

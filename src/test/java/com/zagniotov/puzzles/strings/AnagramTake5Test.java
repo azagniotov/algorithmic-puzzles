@@ -20,7 +20,7 @@ public class AnagramTake5Test {
         assertTrue(anagramTake5.isAnagram("aaaba", "aaaab"));
 
         assertFalse(anagramTake5.isAnagram("toss", "snot"));
-        assertFalse(anagramTake5.isAnagram("joy", "enjoy"));
+        assertFalse(anagramTake5.isAnagram("benjo", "enjoy"));
         assertFalse(anagramTake5.isAnagram("joy", "enjoy"));
         assertFalse(anagramTake5.isAnagram("aaaaa", "baaaa"));
     }
