@@ -55,8 +55,11 @@ class IsomorphicStringTake1 {
             }
 
             firstChars[idx] = paths.get(currentChar);
+            if (firstChars[idx] != secondChars[idx]) {
+                return false;
+            }
         }
 
-        return String.valueOf(firstChars).equals(second);
+        return true;
     }
 }

@@ -11,7 +11,7 @@ class SingleNumberTake1 {
 
     /**
      * XOR:
-     *
+     * <p>
      * 00000111
      * 00000111
      * --------
