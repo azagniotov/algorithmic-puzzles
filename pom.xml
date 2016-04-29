@@ -12,6 +12,7 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.optimize>true</maven.compiler.optimize>
   </properties>
 
   <build>
@@ -23,6 +24,25 @@
         <configuration>
           <source>1.7</source>
           <target>1.7</target>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <version>1.4.0</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>java</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <mainClass>com.zagniotov.main.Main</mainClass>
+          <arguments>
+            <argument>com.zagniotov.puzzles</argument>
+            <argument>linguisticchains,common</argument>
+          </arguments>
         </configuration>
       </plugin>
     </plugins>
