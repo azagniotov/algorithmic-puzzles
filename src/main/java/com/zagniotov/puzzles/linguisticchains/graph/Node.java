@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * Node in a graph
+ * TreeNode in a graph
  */
 class Node {
     private final List<Node> children;

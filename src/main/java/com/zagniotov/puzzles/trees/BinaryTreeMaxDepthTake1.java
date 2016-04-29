@@ -1,10 +1,10 @@
 package com.zagniotov.puzzles.trees;
 
-import com.zagniotov.puzzles.common.Node;
+import com.zagniotov.puzzles.common.TreeNode;
 
 class BinaryTreeMaxDepthTake1 {
 
-    public int maxDepth(final Node root) {
+    public int maxDepth(final TreeNode root) {
         if (root == null) {
             return 0;
         }

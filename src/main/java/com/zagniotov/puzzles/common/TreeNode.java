@@ -1,11 +1,11 @@
 package com.zagniotov.puzzles.common;
 
-public final class Node {
+public final class TreeNode {
     public final int value;
-    public Node left;
-    public Node right;
+    public TreeNode left;
+    public TreeNode right;
 
-    public Node(final int value, final Node left, final Node right) {
+    public TreeNode(final int value, final TreeNode left, final TreeNode right) {
         this.value = value;
         this.left = left;
         this.right = right;
@@ -17,7 +17,7 @@ public final class Node {
 
     @Override
     public String toString() {
-        return "Node{" +
+        return "TreeNode{" +
                 "value=" + value +
                 ", left=" + left +
                 ", right=" + right +

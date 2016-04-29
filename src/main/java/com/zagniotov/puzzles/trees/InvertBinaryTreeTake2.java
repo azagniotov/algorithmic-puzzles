@@ -1,6 +1,6 @@
 package com.zagniotov.puzzles.trees;
 
-import com.zagniotov.puzzles.common.Node;
+import com.zagniotov.puzzles.common.TreeNode;
 
 
 class InvertBinaryTreeTake2 {
@@ -22,11 +22,11 @@ class InvertBinaryTreeTake2 {
          9   6 3  1
 
      */
-    Node invertTree(final Node root) {
+    TreeNode invertTree(final TreeNode root) {
         if (root == null) {
             return null;
         } else {
-            Node cache = invertTree(root.right);
+            TreeNode cache = invertTree(root.right);
             root.right = invertTree(root.left);
             root.left = cache;
 
