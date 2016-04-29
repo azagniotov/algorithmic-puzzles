@@ -32,6 +32,7 @@
 * Find min depth of a tree
 * Find max depth of a tree
 * Invert a binary tree
+* Are two trees are the same
 
 #### Math
 * Find missing number in array of numbers
