@@ -13,6 +13,7 @@
 * Binary search in 2D sorted array
 * All character permutations in an array
 * Find an array element that appears twice among others that appear once
+* Concat N arrays into one, while keeping character order
 
 #### Strings
 * Segregate even/odd numeric characters in a string
