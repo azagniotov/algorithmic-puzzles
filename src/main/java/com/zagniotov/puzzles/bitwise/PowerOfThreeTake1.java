@@ -2,7 +2,7 @@ package com.zagniotov.puzzles.bitwise;
 
 
 class PowerOfThreeTake1 {
-    
+
     PowerOfThreeTake1() {
 
     }

@@ -23,18 +23,19 @@ class EvenOddSortTake3 {
 
         while (leftPointer < rightPointer) {
 
-            while (chars[leftPointer] % 2 == 0 && leftPointer < rightPointer) {
-                leftPointer++;
+            char left = chars[leftPointer];
+            while (left % 2 == 0 && leftPointer < rightPointer) {
+                left = chars[++leftPointer];
             }
 
-            while (chars[rightPointer] % 2 != 0 && leftPointer < rightPointer) {
-                rightPointer--;
+            char right = chars[rightPointer];
+            while (right % 2 != 0 && leftPointer < rightPointer) {
+                right = chars[--rightPointer];
             }
 
             if (leftPointer < rightPointer) {
-                char cache = chars[leftPointer];
-                chars[leftPointer] = chars[rightPointer];
-                chars[rightPointer] = cache;
+                chars[leftPointer] = right;
+                chars[rightPointer] = left;
 
                 leftPointer++;
                 rightPointer--;
