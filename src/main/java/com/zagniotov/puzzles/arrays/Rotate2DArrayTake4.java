@@ -1,12 +1,12 @@
 package com.zagniotov.puzzles.arrays;
 
-class MatrixFlipperTake4 {
+class Rotate2DArrayTake4 {
 
     private final int rows;
     private final int cols;
     private final int[][] matrix;
 
-    MatrixFlipperTake4(final int rows, final int cols) {
+    Rotate2DArrayTake4(final int rows, final int cols) {
         this.rows = rows;
         this.cols = cols;
         this.matrix = new int[rows][cols];
@@ -53,7 +53,7 @@ class MatrixFlipperTake4 {
     }
 
     public static void main(String[] args) {
-        final MatrixFlipperTake4 matrixFlipper = new MatrixFlipperTake4(7, 7);
+        final Rotate2DArrayTake4 matrixFlipper = new Rotate2DArrayTake4(7, 7);
 
         matrixFlipper.dump();
 

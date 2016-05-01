@@ -4,13 +4,13 @@ package com.zagniotov.puzzles.arrays;
 import static com.zagniotov.puzzles.common.Utils.seed;
 import static com.zagniotov.puzzles.common.Utils.stdout;
 
-class MatrixFlipperTake1 {
+class Rotate2DArrayTake1 {
 
     private final int rows;
     private final int cols;
     private final int[][] matrix;
 
-    MatrixFlipperTake1(final int rows, final int cols) {
+    Rotate2DArrayTake1(final int rows, final int cols) {
         this.rows = rows;
         this.cols = cols;
         this.matrix = seed(this.rows, this.cols);
@@ -36,12 +36,12 @@ class MatrixFlipperTake1 {
     }
 
     public static void main(String[] args) {
-        final MatrixFlipperTake1 matrixFlipperTake1 = new MatrixFlipperTake1(7, 7);
+        final Rotate2DArrayTake1 rotate2DArrayTake1 = new Rotate2DArrayTake1(7, 7);
 
-        matrixFlipperTake1.dump();
+        rotate2DArrayTake1.dump();
 
-        matrixFlipperTake1.rotateClockwise();
+        rotate2DArrayTake1.rotateClockwise();
 
-        matrixFlipperTake1.dump();
+        rotate2DArrayTake1.dump();
     }
 }
