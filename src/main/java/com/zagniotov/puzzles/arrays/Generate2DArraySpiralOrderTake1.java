@@ -73,14 +73,17 @@ class Generate2DArraySpiralOrderTake1 {
 
     void spiralInPlace(final int rows, final int cols) {
         final int[][] matrix = new int[rows][cols];
-        spiralInPlace(matrix, 0, 0, rows, cols, 0);
+        spiralInPlace(matrix, rows, cols);
         dump(matrix, rows, cols);
     }
 
-    private void spiralInPlace(final int[][] matrix, int currentRow, int currentCol, int rows, int cols, int value) {
+    private void spiralInPlace(final int[][] matrix, int rows, int cols) {
+        int value = 0;
+        int currentRow = 0;
+        int currentCol = 0;
+
         final int total = rows * cols;
         while (value <= total) {
-
             if (rows <= 0 || cols <= 0) {
                 break;
             }
