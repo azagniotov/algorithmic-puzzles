@@ -4,9 +4,9 @@ package com.zagniotov.puzzles.arrays;
 import java.util.ArrayList;
 import java.util.List;
 
-class Spiral2DArrayTake1 {
+class Print2DArraySpiralOrderTake1 {
 
-    Spiral2DArrayTake1() {
+    Print2DArraySpiralOrderTake1() {
 
     }
 

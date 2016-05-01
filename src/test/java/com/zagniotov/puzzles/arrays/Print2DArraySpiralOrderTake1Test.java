@@ -4,12 +4,12 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class Spiral2DArrayTake1Test {
+public class Print2DArraySpiralOrderTake1Test {
 
     @Test
     public void testSpiral() throws Exception {
 
-        final Spiral2DArrayTake1 spiralArray = new Spiral2DArrayTake1();
+        final Print2DArraySpiralOrderTake1 spiralArray = new Print2DArraySpiralOrderTake1();
 
         assertEquals("[]", spiralArray.spiral(0, 0));
         assertEquals("[]", spiralArray.spiral(1, 0));
