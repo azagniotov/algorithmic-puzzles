@@ -27,6 +27,8 @@
 * Check if two strings are anagrams
 * Check if two strings are isomorphic
 * Regex parser
+* Valid palindrome
+* Check if string is numeric (ambiguous problem statement)
 
 #### Trees
 * Create a balanced binary tree
