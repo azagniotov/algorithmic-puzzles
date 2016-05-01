@@ -6,7 +6,7 @@ package com.zagniotov.puzzles.arrays;
  * <p>
  * For example, given nums = [0, 1, 0, 3, 12], after calling your function, nums should be [1, 3, 12, 0, 0]
  */
-public class MoveZeroesTake1 {
+class MoveZeroesTake1 {
 
     MoveZeroesTake1() {
 

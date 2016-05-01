@@ -13,13 +13,13 @@ import java.util.Map;
  * Because nums[0] + nums[1] = 2 + 7 = 9,
  * return [0, 1].
  */
-public class TwoSumTake1 {
+class TwoSumTake1 {
 
-    public TwoSumTake1() {
+    TwoSumTake1() {
 
     }
 
-    public int[] twoSum(final int[] nums, int target) {
+    int[] twoSum(final int[] nums, int target) {
 
         final Map<Integer, Integer> cache = new HashMap<>();
         final int[] indices = new int[2];

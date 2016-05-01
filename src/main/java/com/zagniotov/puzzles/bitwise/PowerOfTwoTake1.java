@@ -1,7 +1,7 @@
 package com.zagniotov.puzzles.bitwise;
 
 
-public class PowerOfTwoTake1 {
+class PowerOfTwoTake1 {
 
     public PowerOfTwoTake1() {
 

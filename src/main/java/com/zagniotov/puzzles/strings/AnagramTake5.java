@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 
-public class AnagramTake5 {
+class AnagramTake5 {
 
     AnagramTake5() {
 

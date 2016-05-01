@@ -17,7 +17,7 @@ import static com.zagniotov.puzzles.common.Utils.stdout;
  * The worst case scenario is where it ended up in the opposite corner of the matrix,
  * which takes at most 2N steps. Therefore, ths algorithm runs in O(n) time.
  */
-public class BinarySearch2DArrayTake2 {
+class BinarySearch2DArrayTake2 {
 
     private final int rows;
     private final int cols;

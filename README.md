@@ -10,7 +10,7 @@
 
 #### Arrays
 * Prints out 2D array in a spiral order
-* Generates 2D array in a spiral order
+* Generates 2D array in a spiral order (both inwards and out)
 * Rotate 2D array 90 degrees (clockwise and counter-clockwise
 * Binary search in sorted array
 * Binary search in 2D sorted array

@@ -1,6 +1,6 @@
 package com.zagniotov.puzzles.bitwise;
 
-public class CountingOneBitsTake1 {
+class CountingOneBitsTake1 {
 
     CountingOneBitsTake1() {
 
