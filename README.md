@@ -2,6 +2,7 @@
 
 #### Bitwise
 * Power of 2
+* Power of 3
 * Power of 4
 * Count 1's in a binary representation of a number (several ways)
 * Find an array element that appears once among others that appear twice
