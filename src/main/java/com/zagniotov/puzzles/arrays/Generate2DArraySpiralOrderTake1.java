@@ -19,6 +19,13 @@ class Generate2DArraySpiralOrderTake1 {
 
     }
 
+    public static void main(String[] args) {
+        final Generate2DArraySpiralOrderTake1 generateSpiral = new Generate2DArraySpiralOrderTake1();
+
+        generateSpiral.spiralRecursive(7, 7);
+        generateSpiral.spiralInPlace(6, 6);
+    }
+
     void spiralRecursive(final int rows, final int cols) {
         final int[][] matrix = new int[rows][cols];
         spiralRecursive(matrix, 0, 0, rows, cols, 0);
@@ -130,12 +137,5 @@ class Generate2DArraySpiralOrderTake1 {
         }
 
         System.out.println(dump.toString());
-    }
-
-    public static void main(String[] args) {
-        final Generate2DArraySpiralOrderTake1 generateSpiral = new Generate2DArraySpiralOrderTake1();
-
-        generateSpiral.spiralRecursive(7, 7);
-        generateSpiral.spiralInPlace(6, 6);
     }
 }
