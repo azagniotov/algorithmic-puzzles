@@ -1,7 +1,8 @@
 package com.zagniotov.puzzles.strings;
 
+import java.util.HashMap;
+import java.util.Map;
 
-import java.util.Arrays;
 
 class AnagramTake1 {
 
@@ -14,26 +15,24 @@ class AnagramTake1 {
             return false;
         }
 
-        final char[] firstChars = first.toCharArray();
-        final int[] firstCharsCounter = new int[127]; //Enough space to cover numeric values of ASCII alpha-numeric characters
+        final char[] firstChars = first.toLowerCase().toCharArray();
+        final Map<Character, Integer> firstCache = new HashMap<>();
 
-        for (char ch : firstChars) {
-            int count = firstCharsCounter[ch] != 0 ? firstCharsCounter[ch] : 0;
-            firstCharsCounter[ch] = count + 1;
+        for (char current : firstChars) {
+            int count = firstCache.containsKey(current) ? firstCache.get(current) : 0;
+            firstCache.put(current, count + 1);
         }
 
-        final char[] secondChars = second.toCharArray();
-        final int[] secondCharsCounter = new int[127]; //Enough space to cover numeric values of ASCII alpha-numeric characters
-
-        for (char ch : secondChars) {
-            if (firstCharsCounter[ch] == 0) {
+        final char[] secondChars = second.toLowerCase().toCharArray();
+        final Map<Character, Integer> secondCache = new HashMap<>();
+        for (char current : secondChars) {
+            if (!firstCache.containsKey(current)) {
                 return false;
             } else {
-                int count = secondCharsCounter[ch] != 0 ? secondCharsCounter[ch] : 0;
-                secondCharsCounter[ch] = count + 1;
+                int count = secondCache.containsKey(current) ? secondCache.get(current) : 0;
+                secondCache.put(current, count + 1);
             }
         }
-
-        return Arrays.equals(firstCharsCounter, secondCharsCounter);
+        return firstCache.equals(secondCache);
     }
 }

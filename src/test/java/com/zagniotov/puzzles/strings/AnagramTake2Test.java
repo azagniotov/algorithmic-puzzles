@@ -11,16 +11,20 @@ public class AnagramTake2Test {
     @Test
     public void testIsAnagram() throws Exception {
 
-        final AnagramTake2 anagramTake2 = new AnagramTake2();
+        final AnagramTake2 anagramTake = new AnagramTake2();
 
-        assertTrue(anagramTake2.isAnagram("motherinlaw", "hitlerwoman"));
-        assertTrue(anagramTake2.isAnagram("debitcard", "badcredit"));
-        assertTrue(anagramTake2.isAnagram("DORMITORY", "DIRTYROOM"));
-        assertTrue(anagramTake2.isAnagram("ASTRONOMERS", "NOMORESTARS"));
+        assertTrue(anagramTake.isAnagram("motherinlaw", "hitlerwoman"));
+        assertTrue(anagramTake.isAnagram("debitcard", "badcredit"));
+        assertTrue(anagramTake.isAnagram("DORMITORY", "DIRTYROOM"));
+        assertTrue(anagramTake.isAnagram("ASTRONOMERS", "NOMORESTARS"));
+        assertTrue(anagramTake.isAnagram("aaaba", "aaaab"));
+        assertTrue(anagramTake.isAnagram("Astronomer", "MoonStarer"));
+        assertTrue(anagramTake.isAnagram("PrincessDiana", "EndIsACarSpin"));
+        assertTrue(anagramTake.isAnagram("YearTwoThousand", "AYearToShutDown"));
 
-        assertFalse(anagramTake2.isAnagram("toss", "snot"));
-        assertFalse(anagramTake2.isAnagram("benjo", "enjoy"));
-        assertFalse(anagramTake2.isAnagram("joy", "enjoy"));
-        assertFalse(anagramTake2.isAnagram("aaaaa", "baaaa"));
+        assertFalse(anagramTake.isAnagram("toss", "snot"));
+        assertFalse(anagramTake.isAnagram("benjo", "enjoy"));
+        assertFalse(anagramTake.isAnagram("joy", "enjoy"));
+        assertFalse(anagramTake.isAnagram("aaaaa", "baaaa"));
     }
 }
