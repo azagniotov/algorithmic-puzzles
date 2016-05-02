@@ -1,7 +1,5 @@
 package com.zagniotov.puzzles.strings;
 
-import static com.zagniotov.puzzles.common.Utils.swapTwo;
-
 /**
  * - The characters in the string are unique, i.e.: solution does not eliminate duplicate permutations
  * - The time complexity of these solutions is O(n!)

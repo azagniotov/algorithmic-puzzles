@@ -1,8 +1,8 @@
 package com.zagniotov.puzzles.strings;
 
-class AnagramTake4 {
+class AnagramTake6 {
 
-    AnagramTake4() {
+    AnagramTake6() {
 
     }
 
@@ -12,15 +12,15 @@ class AnagramTake4 {
         }
 
         int counter = 0;
-        int[] cache = new int[127];
+        final int[] cached = new int[255]; // Extended ASCII set: 8-bit characters
         char[] firstChars = first.toCharArray();
         char[] secondChars = second.toCharArray();
-
-        for (int idx = 0; idx < firstChars.length; idx++) {
-            if (++cache[firstChars[idx]] == 1) {
+        for (int idx = 0; idx < first.length(); idx++) {
+            if (++cached[firstChars[idx]] == 1) {
                 counter++;
             }
-            if (--cache[secondChars[idx]] == 0) {
+
+            if (--cached[secondChars[idx]] == 0) {
                 counter--;
             }
         }

@@ -1,8 +1,6 @@
 package com.zagniotov.puzzles.arrays;
 
 
-import static com.zagniotov.puzzles.common.Utils.swapTwo;
-
 class AllCharacterPermutationsTake2 {
 
     void permuteArray(final char[] chars) {
@@ -13,10 +11,16 @@ class AllCharacterPermutationsTake2 {
         if (length == 1) {
             System.out.println(chars);
         } else {
-            for (int idx = 0; idx < length; idx ++) {
-                swapTwo(chars, idx, length - 1);
+            for (int idx = 0; idx < length; idx++) {
+                char cache = chars[idx];
+                chars[idx] = chars[length - 1];
+                chars[length - 1] = cache;
+
                 permuteArray(chars, length - 1);
-                swapTwo(chars, idx, length - 1);
+
+                cache = chars[idx];
+                chars[idx] = chars[length - 1];
+                chars[length - 1] = cache;
             }
         }
     }

@@ -22,11 +22,11 @@ class DuplicateNumberTake2 {
 
     /**
      * If we assume that:
-     *
+     * <p>
      * 1. numbers are in sequence that starts increasing from 1 (incl.); and
      * 2. numbers can be sorted or unsorted; and
      * 3. numbers contain only ONE value which appears twice
-     *
+     * <p>
      * Then, the following trick using XOR will work!
      */
     int duplicateNumber2(int[] numbers) {

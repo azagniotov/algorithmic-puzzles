@@ -1,10 +1,6 @@
 package com.zagniotov.puzzles.strings;
 
-import com.zagniotov.puzzles.common.Utils;
-
-import static com.zagniotov.puzzles.common.Utils.isEven;
-import static com.zagniotov.puzzles.common.Utils.isOdd;
-import static com.zagniotov.puzzles.common.Utils.swapTwo;
+import static com.zagniotov.puzzles.common.Utils.*;
 
 /**
  * - Takes in a string of numeric characters (positive ints only) and shifts all the odd characters to the right,

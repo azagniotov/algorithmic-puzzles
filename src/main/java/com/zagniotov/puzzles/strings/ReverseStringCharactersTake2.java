@@ -1,8 +1,6 @@
 package com.zagniotov.puzzles.strings;
 
 
-import static com.zagniotov.puzzles.common.Utils.swapAll;
-
 class ReverseStringCharactersTake2 {
 
     ReverseStringCharactersTake2() {
