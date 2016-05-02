@@ -21,6 +21,7 @@ public class AnagramTake1Test {
         assertTrue(anagramTake.isAnagram("Astronomer", "MoonStarer"));
         assertTrue(anagramTake.isAnagram("PrincessDiana", "EndIsACarSpin"));
         assertTrue(anagramTake.isAnagram("YearTwoThousand", "AYearToShutDown"));
+        assertTrue(anagramTake.isAnagram("aaxju", "juxaa"));
 
         assertFalse(anagramTake.isAnagram("toss", "snot"));
         assertFalse(anagramTake.isAnagram("benjo", "enjoy"));
