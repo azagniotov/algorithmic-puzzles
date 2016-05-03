@@ -21,6 +21,8 @@ public class ValidPalindromeTake1Test {
         assertTrue(validPalindromeTake1.isPalindrome("No 'x' in 'Nixon'"));
         assertTrue(validPalindromeTake1.isPalindrome("Are we not drawn onward, we few, drawn onward to new era?"));
         assertTrue(validPalindromeTake1.isPalindrome("Barge in! Relate mere war of 1991 for a were-metal Ernie grab!"));
+        assertTrue(validPalindromeTake1.isPalindrome("eeeeeweeeee"));
+        assertTrue(validPalindromeTake1.isPalindrome("a."));
 
         assertFalse(validPalindromeTake1.isPalindrome("race a car"));
         assertFalse(validPalindromeTake1.isPalindrome("0P"));
