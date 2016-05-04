@@ -24,28 +24,26 @@ class RegexParserTake1 {
 
         // Empty pattern will always return false
         if (pattern.isEmpty()) {
-            return candidate.isEmpty();
+            return false;
+        } else if (candidate.isEmpty()) {
+            return true;
         }
 
         if (pattern.length() > 1) {
             if (pattern.charAt(1) == '*') {
                 int start = 0;
                 while (start < candidate.length() && (pattern.charAt(0) == '.' || candidate.charAt(start) == pattern.charAt(0))) {
-                    if (isMatch(candidate.substring(start), pattern.substring(1))) {
-                        return true;
-                    }
                     start++;
                 }
                 return isMatch(candidate.substring(start), pattern.substring(2));
             }
         }
 
-        if (candidate.length() > 0 && (pattern.charAt(0) == '.' || pattern.charAt(0) == candidate.charAt(0))) {
+        if (pattern.charAt(0) == '.' || pattern.charAt(0) == candidate.charAt(0)) {
             // If the last pattern matches the last text OR
             // If hasn't reached the end, try to match the rest strings
             return (pattern.length() == 1 && candidate.length() == 1) || isMatch(candidate.substring(1), pattern.substring(1));
         }
-
-        return candidate.isEmpty();
+        return false;
     }
 }
