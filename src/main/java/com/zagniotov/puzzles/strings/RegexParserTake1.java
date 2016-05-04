@@ -13,7 +13,6 @@ class RegexParserTake1 {
     }
 
     boolean isMatch(final String candidate, final String pattern) {
-        // Base cases
         if (candidate == null && pattern == null) {
             return true;
         }  else if (candidate == null || pattern == null) {
@@ -22,7 +21,6 @@ class RegexParserTake1 {
             return true;
         }
 
-        // Empty pattern will always return false
         if (pattern.isEmpty()) {
             return false;
         } else if (candidate.isEmpty()) {
@@ -43,8 +41,6 @@ class RegexParserTake1 {
         }
 
         if (pattern.charAt(0) == '.' || pattern.charAt(0) == candidate.charAt(0)) {
-            // If the last pattern matches the last text OR
-            // If hasn't reached the end, try to match the rest strings
             return (pattern.length() == 1 && candidate.length() == 1) || isMatch(candidate.substring(1), pattern.substring(1));
         }
         return false;
