@@ -24,6 +24,7 @@ public class RegexParserTake2Test {
         assertTrue(regexParserTake2.isMatch("ab", "a*"));
 
 
+        assertFalse(regexParserTake2.isMatch("abc", "."));
         assertFalse(regexParserTake2.isMatch("ab", "*a"));
         assertFalse(regexParserTake2.isMatch("abc", ""));
         assertFalse(regexParserTake2.isMatch("", "abc"));
