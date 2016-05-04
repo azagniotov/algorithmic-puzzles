@@ -23,8 +23,22 @@ class RegexParserTake1 {
 
         if (pattern.isEmpty()) {
             return false;
-        } else if (candidate.isEmpty()) {
-            return true;
+        } else {
+            if (candidate.isEmpty()) {
+
+                if (pattern.length() > 1) {
+                    if (pattern.charAt(1) == '*') {
+                        return isMatch("", pattern.substring(2));
+                    }
+                }
+
+                /*
+                if (pattern.length() == 2 && pattern.charAt(pattern.length() - 1) == '*') {
+                    return true;
+                }
+                return pattern.charAt(pattern.length() - 1) == '*';
+                */
+            }
         }
 
         if (pattern.length() > 1) {

@@ -19,12 +19,26 @@ public class RegexParserTake1Test {
         assertTrue(regexParser.isMatch("aa", "a*"));
         assertTrue(regexParser.isMatch("aa", ".*"));
         assertTrue(regexParser.isMatch("ab", ".*"));
+        assertTrue(regexParser.isMatch("aa", ".a"));
         assertTrue(regexParser.isMatch("abca", ".b*c*a"));
-        assertTrue(regexParser.isMatch("abc", "a.*b"));
         assertTrue(regexParser.isMatch("aa", "a*a"));
         assertTrue(regexParser.isMatch("aaaab", "a*b"));
         assertTrue(regexParser.isMatch("abbc", "ab*bbc"));
+        assertTrue(regexParser.isMatch("a", "ab*"));
+        assertTrue(regexParser.isMatch("", "c*c*"));
+        assertTrue(regexParser.isMatch("", ".*.*"));
+        assertTrue(regexParser.isMatch("", "a*"));
+        assertTrue(regexParser.isMatch("a", ".*.a*"));
 
+//        assertFalse(regexParser.isMatch("", "..a*"));
+//        assertFalse(regexParser.isMatch("", "*.a*"));
+//        assertFalse(regexParser.isMatch("", ".a*"));
+//        assertFalse(regexParser.isMatch("", ".*.a*"));
+//        assertFalse(regexParser.isMatch("", ".*.a*"));
+//        assertFalse(regexParser.isMatch("a", "a.*.a*"));
+//        assertFalse(regexParser.isMatch("a", ".*..a*"));
+        assertFalse(regexParser.isMatch("a", ".a"));
+        assertFalse(regexParser.isMatch("a", "ab*a"));
         assertFalse(regexParser.isMatch("a", "b"));
         assertFalse(regexParser.isMatch("aa", "a"));
         assertFalse(regexParser.isMatch("aaa", "aa"));
@@ -33,10 +47,8 @@ public class RegexParserTake1Test {
         assertFalse(regexParser.isMatch("aaba", "ab*a*c*a"));
         assertFalse(regexParser.isMatch("aaa", "ab*a"));
         assertFalse(regexParser.isMatch("aaabbbabc", "*abc"));
-
-        // this one fails :(
-//      assertFalse(regexParser.isMatch("ab", ".*c"));
-
+        assertFalse(regexParser.isMatch("abc", "a.*b"));
+        assertFalse(regexParser.isMatch("ab", ".*c"));
 
     }
 }
