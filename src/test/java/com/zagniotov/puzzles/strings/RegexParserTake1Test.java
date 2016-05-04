@@ -10,13 +10,7 @@ public class RegexParserTake1Test {
     @Test
     public void testIsMatch() throws Exception {
         final RegexParserTake1 regexParser = new RegexParserTake1();
-
-        assertFalse(regexParser.isMatch("aa", "a"));
-        assertFalse(regexParser.isMatch("aaa", "aa"));
-        assertFalse(regexParser.isMatch("abc", "a.*b"));
-        assertFalse(regexParser.isMatch("abc", ".a*c"));
-        assertFalse(regexParser.isMatch("abbc", "ab*bbc"));
-
+        
         assertTrue(regexParser.isMatch("abbbc", "ab*c"));
         assertTrue(regexParser.isMatch("ac", "ab*c"));
         assertTrue(regexParser.isMatch("abcbcd", "a.*c.*d"));
@@ -30,5 +24,12 @@ public class RegexParserTake1Test {
         assertTrue(regexParser.isMatch("abca", ".b*c*a"));
         assertTrue(regexParser.isMatch("abc", "*"));
         assertTrue(regexParser.isMatch("abcdef", "a*"));
+
+        assertFalse(regexParser.isMatch("aa", "a"));
+        assertFalse(regexParser.isMatch("aaa", "aa"));
+        assertFalse(regexParser.isMatch("abc", "a.*b"));
+        assertFalse(regexParser.isMatch("abc", ".a*c"));
+        assertFalse(regexParser.isMatch("abbc", "ab*bbc"));
+        assertFalse(regexParser.isMatch("aabcde", "c*a*b"));
     }
 }
