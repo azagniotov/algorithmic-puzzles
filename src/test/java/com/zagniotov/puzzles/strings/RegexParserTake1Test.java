@@ -30,13 +30,13 @@ public class RegexParserTake1Test {
         assertTrue(regexParser.isMatch("", "a*"));
         assertTrue(regexParser.isMatch("a", ".*.a*"));
 
-//        assertFalse(regexParser.isMatch("", "..a*"));
-//        assertFalse(regexParser.isMatch("", "*.a*"));
-//        assertFalse(regexParser.isMatch("", ".a*"));
-//        assertFalse(regexParser.isMatch("", ".*.a*"));
-//        assertFalse(regexParser.isMatch("", ".*.a*"));
-//        assertFalse(regexParser.isMatch("a", "a.*.a*"));
-//        assertFalse(regexParser.isMatch("a", ".*..a*"));
+        assertFalse(regexParser.isMatch("", "..a*"));
+        assertFalse(regexParser.isMatch("", "*.a*"));
+        assertFalse(regexParser.isMatch("", ".a*"));
+        assertFalse(regexParser.isMatch("", ".*.a*"));
+        assertFalse(regexParser.isMatch("", ".*.a*"));
+        assertFalse(regexParser.isMatch("a", "a.*.a*"));
+        assertFalse(regexParser.isMatch("a", ".*..a*"));
         assertFalse(regexParser.isMatch("a", ".a"));
         assertFalse(regexParser.isMatch("a", "ab*a"));
         assertFalse(regexParser.isMatch("a", "b"));
