@@ -33,6 +33,9 @@ class RegexParserTake1 {
             if (pattern.charAt(1) == '*') {
                 int start = 0;
                 while (start < candidate.length() && (pattern.charAt(0) == '.' || candidate.charAt(start) == pattern.charAt(0))) {
+                    if (isMatch(candidate.substring(start), pattern.substring(2))) {
+                        return true;
+                    }
                     start++;
                 }
                 return isMatch(candidate.substring(start), pattern.substring(2));
