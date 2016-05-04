@@ -5,11 +5,11 @@ import org.junit.Test;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
-public class RegexParserTake1Test {
+public class RegexParserTake2Test {
 
     @Test
     public void testIsMatch() throws Exception {
-        final RegexParserTake1 regexParser = new RegexParserTake1();
+        final RegexParserTake2 regexParser = new RegexParserTake2();
 
         assertTrue(regexParser.isMatch("ac", "ab*c"));
         assertTrue(regexParser.isMatch("abcbcd", "a.*c.*d"));
