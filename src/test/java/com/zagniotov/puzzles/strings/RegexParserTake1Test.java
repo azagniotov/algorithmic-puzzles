@@ -19,17 +19,20 @@ public class RegexParserTake1Test {
         assertTrue(regexParser.isMatch("aa", "a*"));
         assertTrue(regexParser.isMatch("aa", ".*"));
         assertTrue(regexParser.isMatch("ab", ".*"));
-        assertTrue(regexParser.isMatch("aaabbbabc", "*abc"));
         assertTrue(regexParser.isMatch("abca", ".b*c*a"));
-        assertTrue(regexParser.isMatch("abc", "*"));
-        assertTrue(regexParser.isMatch("abcdef", "a*"));
+        assertTrue(regexParser.isMatch("abc", "a.*b"));
 
         assertFalse(regexParser.isMatch("aa", "a"));
         assertFalse(regexParser.isMatch("aaa", "aa"));
-        assertFalse(regexParser.isMatch("abc", "a.*b"));
         assertFalse(regexParser.isMatch("abc", ".a*c"));
         assertFalse(regexParser.isMatch("abbc", "ab*bbc"));
         assertFalse(regexParser.isMatch("aabcde", "c*a*b"));
-//        assertFalse(regexParser.isMatch("aaba", "ab*a*c*a"));
+        assertFalse(regexParser.isMatch("aaba", "ab*a*c*a"));
+        assertFalse(regexParser.isMatch("aaa", "ab*a"));
+        assertFalse(regexParser.isMatch("aaabbbabc", "*abc"));
+
+        assertFalse(regexParser.isMatch("ab", ".*c"));
+
+
     }
 }
