@@ -13,37 +13,24 @@ class RegexParserTake1 {
     }
 
     boolean isMatch(final String candidate, final String pattern) {
-        if (candidate.isEmpty() && pattern.isEmpty()) {
-            return true;
-        }
-
         if (pattern.isEmpty()) {
-            return false;
+            return candidate.isEmpty();
         }
 
-        if (pattern.length() > 1) {
-            if (pattern.charAt(1) == '*') {
-
-                if (candidate.isEmpty()) {
-                    return isMatch("", pattern.substring(2));
+        final char patternStart = pattern.charAt(0);
+        if (pattern.length() > 1 && pattern.charAt(1) == '*') {
+            int start = 0;
+            final String patternTail = pattern.substring(2);
+            while (start < candidate.length() && (candidate.charAt(start) == patternStart || patternStart == '.')) {
+                if (isMatch(candidate.substring(start), patternTail)) {
+                    return true;
                 }
-
-                int start = 0;
-                while (start < candidate.length() && (pattern.charAt(0) == '.' || candidate.charAt(start) == pattern.charAt(0))) {
-                    if (isMatch(candidate.substring(start), pattern.substring(2))) {
-                        return true;
-                    }
-                    start++;
-                }
-                return isMatch(candidate.substring(start), pattern.substring(2));
+                start++;
             }
-        }
+            return isMatch(candidate.substring(start), patternTail);
 
-        if (!candidate.isEmpty()) {
-            if (pattern.charAt(0) == '.' || pattern.charAt(0) == candidate.charAt(0)) {
-                return (pattern.length() == 1 && candidate.length() == 1) || isMatch(candidate.substring(1), pattern.substring(1));
-            }
         }
-        return false;
+        return !candidate.isEmpty() && (candidate.charAt(0) == patternStart || patternStart == '.') &&
+                isMatch(candidate.substring(1), pattern.substring(1));
     }
 }
