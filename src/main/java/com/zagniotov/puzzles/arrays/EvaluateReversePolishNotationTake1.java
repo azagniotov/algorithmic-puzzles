@@ -11,7 +11,7 @@ package com.zagniotov.puzzles.arrays;
  */
 class EvaluateReversePolishNotationTake1 {
 
-    int evalRPN(String[] tokens) {
+    public int evalRPN(String[] tokens) {
         int length = tokens.length;
         if (length == 0) {
             return 0;
@@ -20,28 +20,24 @@ class EvaluateReversePolishNotationTake1 {
         } else {
             int[] stack = new int[length / 2 + 1]; //Only half would be operators
             int lastOffset = -1;
-            for (String token : tokens) {
-                if (isOperator(token)) {
-                    int first = stack[lastOffset - 1];
-                    int last = stack[lastOffset];
-                    if ("+".equals(token)) {
-                        stack[--lastOffset] = first + last;
-                    } else if ("-".equals(token)) {
-                        stack[--lastOffset] = first - last;
-                    } else if ("*".equals(token)) {
-                        stack[--lastOffset] = first * last;
-                    } else {
-                        stack[--lastOffset] = first / last;
-                    }
-                } else {
-                    stack[++lastOffset] = Integer.parseInt(token);
+            for (final String token : tokens) {
+                char firstChar = token.charAt(0);
+                if (token.length() == 1 && '-' == firstChar) {
+                    stack[--lastOffset] = stack[lastOffset] - stack[lastOffset + 1];
+                    continue;
+                } else if ('+' == firstChar) {
+                    stack[--lastOffset] = stack[lastOffset] + stack[lastOffset + 1];
+                    continue;
+                } else if ('/' == firstChar) {
+                    stack[--lastOffset] = stack[lastOffset] / stack[lastOffset + 1];
+                    continue;
+                } else if ('*' == firstChar) {
+                    stack[--lastOffset] = stack[lastOffset] * stack[lastOffset + 1];
+                    continue;
                 }
+                stack[++lastOffset] = Integer.parseInt(token);
             }
             return stack[0];
         }
-    }
-
-    private boolean isOperator(final String token) {
-        return token.length() == 1 && "+-/*".indexOf(token.charAt(0)) != -1;
     }
 }

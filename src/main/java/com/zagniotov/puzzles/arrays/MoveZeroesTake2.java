@@ -14,13 +14,15 @@ class MoveZeroesTake2 {
 
     int[] moveZeroes(final int[] numbers) {
 
-        int zeroCount = 0;
+        int totalZeroes = 0;
         for (int idx = 0; idx < numbers.length; idx++) {
+
             if (numbers[idx] == 0) {
-                zeroCount++;
-            } else if (numbers[idx] != 0 && numbers[idx - zeroCount] == 0) {
-                numbers[idx - zeroCount] = numbers[idx];
-                numbers[idx] = 0;
+                totalZeroes++;
+            } else if (numbers[idx - totalZeroes] == 0) {
+                int cache = numbers[idx];
+                numbers[idx] = numbers[idx - totalZeroes];
+                numbers[idx - totalZeroes] = cache;
             }
         }
 

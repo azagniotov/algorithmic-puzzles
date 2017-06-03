@@ -17,30 +17,29 @@ class EvenOddSortTake3 {
 
     // Assume that the string is not empty nor null and contains only numeric chars
     String segregate(final String subject) {
+        final char[] chars = subject.toCharArray();
         int leftPointer = 0;
-        int rightPointer = subject.length() - 1;
-        char[] chars = subject.toCharArray();
+        int rightPointer = chars.length - 1;
 
         while (leftPointer < rightPointer) {
 
-            char left = chars[leftPointer];
-            while (left % 2 == 0 && leftPointer < rightPointer) {
-                left = chars[++leftPointer];
+            while (chars[leftPointer] % 2 == 0 && leftPointer < rightPointer) {
+                leftPointer++;
             }
 
-            char right = chars[rightPointer];
-            while (right % 2 != 0 && leftPointer < rightPointer) {
-                right = chars[--rightPointer];
+            while (chars[rightPointer] % 2 != 0 && leftPointer < rightPointer) {
+                rightPointer--;
             }
 
             if (leftPointer < rightPointer) {
-                chars[leftPointer] = right;
-                chars[rightPointer] = left;
-
+                char temp = chars[leftPointer];
+                chars[leftPointer] = chars[rightPointer];
+                chars[rightPointer] = temp;
                 leftPointer++;
                 rightPointer--;
             }
         }
-        return String.valueOf(chars);
+
+        return new String(chars);
     }
 }

@@ -2,8 +2,6 @@ package com.zagniotov.puzzles.bitwise;
 
 import org.junit.Test;
 
-import java.util.Arrays;
-
 import static org.junit.Assert.assertEquals;
 
 
@@ -11,38 +9,65 @@ public class CountingOneBitsTake1Test {
 
     final CountingOneBitsTake1 countingOneBitsTake1 = new CountingOneBitsTake1();
 
+
+    @Test
+    public void naive() throws Exception {
+        assertEquals(naive(10, 13), 0);
+        assertEquals(naive(12, 13), 1);
+//        assertEquals(naive(11, 61), solution(11, 61));
+    }
+
     @Test
     public void testCountBits1() throws Exception {
-        int result = countingOneBitsTake1.countOneBits1(21);
-
-        assertEquals(3, result);
+//        assertEquals(naive(10, 13), solution(10, 13));
+//        assertEquals(naive(12, 13), solution(12, 13));
+//        assertEquals(naive(12, 14), solution(12, 14));
+//        assertEquals(naive(11, 15), solution(11, 15));
+//        assertEquals(naive(11, 11), solution(11, 11));
+//        assertEquals(naive(11, 16), solution(11, 16));
+//        assertEquals(naive(1, 457), solution(1, 457));
+//        assertEquals(naive(11, 61), solution(11, 61));
+        assertEquals(naive(5, 9), solution(5, 9));
     }
 
-    @Test
-    public void testCountBits2() throws Exception {
-        int result = countingOneBitsTake1.countOneBits2(21);
-
-        assertEquals(3, result);
+    /**
+     * Submitted version
+     */
+    private int solution(int start, int limit) {
+        if (start % 2 != 0) {
+            return start ^ solution(start + 1, limit);
+        }
+        if (limit % 2 == 0) {
+            return solution(start, limit - 1) ^ limit;
+        }
+        int numbersInBetween = limit - start + 1;
+        return numbersInBetween / 2 % 2;
     }
 
-    @Test
-    public void testCountBits3() throws Exception {
-        int result = countingOneBitsTake1.countOneBits3(21);
-        assertEquals(3, result);
+    /*
+    Find XOR result of all the elements in given range
 
-        result = countingOneBitsTake1.countOneBits3(7);
-        assertEquals(3, result);
+    Another version, much shorter
+
+     private int solution(int start, int limit) {
+        int result = 0;
+        if (start % 2 != 0) {
+            result ^= start++;
+        }
+        if (limit % 2 == 0) {
+            result ^= limit--;
+        }
+        int numbersInBetween = limit - start + 1;
+        return result ^ numbersInBetween / 2 % 2;
     }
+     */
 
-    @Test
-    public void testCountBits() throws Exception {
-        final CountingOneBitsTake1 countingOneBitsTake1 = new CountingOneBitsTake1();
-        int[] result = countingOneBitsTake1.countOneBits4(5);
-
-        assertEquals(Arrays.toString(new int[]{0, 1, 1, 2, 1, 2}), Arrays.toString(result));
-
-        result = countingOneBitsTake1.countOneBits4(7);
-        assertEquals(Arrays.toString(new int[]{0, 1, 1, 2, 1, 2, 2, 3}), Arrays.toString(result));
+    private int naive(int start, int limit) {
+        int result = 0;
+        while (start <= limit) {
+            result ^= start++;
+        }
+        return result;
     }
 
 }

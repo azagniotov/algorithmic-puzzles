@@ -11,7 +11,7 @@ public class AnagramTake2Test {
     @Test
     public void testIsAnagram() throws Exception {
 
-        final AnagramTake2 anagramTake = new AnagramTake2();
+        final AnagramTake3 anagramTake = new AnagramTake3();
 
         assertTrue(anagramTake.isAnagram("motherinlaw", "hitlerwoman"));
         assertTrue(anagramTake.isAnagram("debitcard", "badcredit"));

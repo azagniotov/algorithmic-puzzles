@@ -1,8 +1,9 @@
 package com.zagniotov.puzzles.strings;
 
-class AnagramTake2 {
 
-    AnagramTake2() {
+public class AnagramTake3 {
+
+    AnagramTake3() {
 
     }
 
@@ -12,11 +13,11 @@ class AnagramTake2 {
         }
 
         int counter = 0;
-        int[] cache = new int[128];
-        char[] firstChars = first.toLowerCase().toCharArray();
-        char[] secondChars = second.toLowerCase().toCharArray();
+        final char[] firstChars = first.toLowerCase().toCharArray();
+        final char[] secondChars = second.toLowerCase().toCharArray();
+        final int[] cache = new int[127];
 
-        for (int idx = 0; idx < first.length(); idx++) {
+        for (int idx = 0; idx < firstChars.length; idx++) {
             if (++cache[firstChars[idx]] == 1) {
                 counter++;
             }

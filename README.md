@@ -19,7 +19,7 @@
 * Find an array element that appears twice among others that appear once
 * Concat N arrays into one, while keeping character order
 
-#### Strings
+### Strings
 * Segregate even/odd numeric characters in a string
 * Reverse word characters
 * Reverse word vowels
