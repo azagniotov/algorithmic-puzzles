@@ -1,0 +1,53 @@
+plugins {
+    id "java"
+    id "idea"
+}
+
+group = "io.github.azagniotov"
+version = "1.0.0-SNAPSHOT"
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+repositories {
+    mavenLocal()
+    maven { url "https://repo.maven.apache.org/maven2" }
+    jcenter { url "https://jcenter.bintray.com" }
+}
+
+
+dependencies {
+    testImplementation "junit:junit:4.13.1"
+    testImplementation "org.mockito:mockito-core:3.3.3"
+    testImplementation "org.hamcrest:hamcrest-core:2.2"
+}
+
+idea {
+    project {
+        jdkName = "1.8"
+        languageLevel = "1.8"
+        vcs = "Git"
+    }
+}
+
+if (JavaVersion.current().isJava8Compatible()) {
+    allprojects {
+        tasks.withType(Javadoc) {
+            options.addStringOption('Xdoclint:none', '-quiet')
+        }
+    }
+}
+
+compileJava {
+    options.encoding = 'UTF-8'
+    options.compilerArgs << '-parameters'
+}
+
+compileTestJava {
+    options.encoding = 'UTF-8'
+}
+
+test.outputs.upToDateWhen { false }
+
